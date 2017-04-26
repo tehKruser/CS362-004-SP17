@@ -1096,7 +1096,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   return -1;
 }
 
-
+/*
 int adventurerCard(struct gameState *state)
 {
   int currentPlayer = whoseTurn(state);
@@ -1113,7 +1113,7 @@ int adventurerCard(struct gameState *state)
         drawCard(currentPlayer, state);
         cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
         //if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
-        /** Bug: replaced 'cardDrawn == copper' with '(cardDrawn = copper)' **/
+        /** Bug: replaced 'cardDrawn == copper' with '(cardDrawn = copper)' *
         if ((cardDrawn = copper) || cardDrawn == silver || cardDrawn == gold)
           drawntreasure++;
         else{
@@ -1126,6 +1126,7 @@ int adventurerCard(struct gameState *state)
     while(z-1>=0){
         state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
         z=z-1;
+
 =======
   int i;
   int j;
@@ -1570,7 +1571,7 @@ int adventurerCard(struct gameState *state)
 
   return -1;
 }
-
+*/
 
 int adventurerCard(struct gameState *state)
 {
@@ -1587,7 +1588,9 @@ int adventurerCard(struct gameState *state)
         }
         drawCard(currentPlayer, state);
         cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-        if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+        //if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+        /** Bug: replaced 'cardDrawn == copper' with '(cardDrawn = copper)' **/
+        if (cardDrawn = copper || cardDrawn == silver || cardDrawn == gold)
           drawntreasure++;
         else{
           temphand[z]=cardDrawn;
