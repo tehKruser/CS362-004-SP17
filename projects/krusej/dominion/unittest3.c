@@ -21,7 +21,7 @@
 #include <stdlib.h>
 
 #define UNITTEST "unittest3"
-#define FUNCTEST "isGameOver()"
+#define FUNCTEST "endTurn()"
 
 // set NOISY_TEST to 0 to remove printfs from output
 #define NOISY_TEST 1
@@ -39,9 +39,15 @@ int main() {
     printf("----------------- %s Testing: %s ----------------", UNITTEST, FUNCTEST);
 
     for (numPlayers = 2; numPlayers <= MAX_PLAYERS; numPlayers++) {
+#if (NOISY_TEST == 1)
+        printf("\n***Switching to a %d player game.", numPlayers);
+#endif
         memset(&G, 23, sizeof(struct gameState));   // clear the game state
         initializeGame(numPlayers, k, seed, &G); // initialize a new game
         for (p = 0; p < numPlayers; p++) {
+#if (NOISY_TEST == 1)
+            printf("\n***Ending turn for player %d.", p);
+#endif
             G.whoseTurn = p;
             endTurn(&G);
 

@@ -4924,7 +4924,9 @@ Lines executed:17.01% of 582
 Creating 'dominion.c.gcov'
 
 unittest3.c:
------------------ unittest3 Testing: isGameOver() ----------------
+----------------- unittest3 Testing: endTurn() ----------------
+***Switching to a 2 player game.
+***Ending turn for player 0.
 Test that player whose turn ended has discarded hand.
 G.hand[0][0]: -1, expected: -1
 Test that player whose turn ended has discarded hand.
@@ -4945,6 +4947,7 @@ G.numActions: 1, expected: 1
 G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
+***Ending turn for player 1.
 Test that player whose turn ended has discarded hand.
 G.hand[1][0]: -1, expected: -1
 Test that player whose turn ended has discarded hand.
@@ -4965,6 +4968,8 @@ G.numActions: 1, expected: 1
 G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
+***Switching to a 3 player game.
+***Ending turn for player 0.
 Test that player whose turn ended has discarded hand.
 G.hand[0][0]: -1, expected: -1
 Test that player whose turn ended has discarded hand.
@@ -4985,6 +4990,7 @@ G.numActions: 1, expected: 1
 G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
+***Ending turn for player 1.
 Test that player whose turn ended has discarded hand.
 G.hand[1][0]: -1, expected: -1
 Test that player whose turn ended has discarded hand.
@@ -5005,6 +5011,7 @@ G.numActions: 1, expected: 1
 G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
+***Ending turn for player 2.
 Test that player whose turn ended has discarded hand.
 G.hand[2][0]: -1, expected: -1
 Test that player whose turn ended has discarded hand.
@@ -5025,6 +5032,8 @@ G.numActions: 1, expected: 1
 G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
+***Switching to a 4 player game.
+***Ending turn for player 0.
 Test that player whose turn ended has discarded hand.
 G.hand[0][0]: -1, expected: -1
 Test that player whose turn ended has discarded hand.
@@ -5045,6 +5054,7 @@ G.numActions: 1, expected: 1
 G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
+***Ending turn for player 1.
 Test that player whose turn ended has discarded hand.
 G.hand[1][0]: -1, expected: -1
 Test that player whose turn ended has discarded hand.
@@ -5065,6 +5075,7 @@ G.numActions: 1, expected: 1
 G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
+***Ending turn for player 2.
 Test that player whose turn ended has discarded hand.
 G.hand[2][0]: -1, expected: -1
 Test that player whose turn ended has discarded hand.
@@ -5085,6 +5096,7 @@ G.numActions: 1, expected: 1
 G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
+***Ending turn for player 3.
 Test that player whose turn ended has discarded hand.
 G.hand[3][0]: -1, expected: -1
 Test that player whose turn ended has discarded hand.
