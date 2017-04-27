@@ -28,8 +28,7 @@ int main() {
     int seed = 1000;
     int numPlayer;
     int maxBonus = 10;
-    int p, r, handCount, cardNumber, cardCost, playerCoins, playerBuys;
-    int bonus;
+    int p, r, cardNumber, cardCost, playerCoins, playerBuys, supplyPos, supplyCount;
     int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
 
     struct gameState G;
@@ -38,12 +37,18 @@ int main() {
     printf("TESTING buyCard():\n");
     for (numPlayer = 2; numplayer <= MAX_PLAYERS; numPlayer++) {
          for (p = 0; p < numPlayer; p++) {
-            for (handCount = 1; handCount <= maxHandCount; handCount++){
-                for(cardNumber = curse; cardNumber <= treasure_map; cardNumber++){
-                    cardCost = getCost(cardNumber);
-                    for(playerCoins = cardCost - 1; playerCoins <= cardCost; playerCoins++){
-                        for(playerBuys = 0; playerBuys <= 1; playerBuys++){
-
+            for(cardNumber = curse; cardNumber <= treasure_map; cardNumber++){
+                cardCost = getCost(cardNumber);
+                for(playerCoins = cardCost - 1; playerCoins <= cardCost; playerCoins++){
+                    for(playerBuys = 0; playerBuys <= 1; playerBuys++){
+                        for(supplyPos = 0; supplyPos <= treasure_map; supplyPos++){
+                            for(supplyCount = 0; supplyCount <= 1; supplyCount++){
+                                memset(&G, 23, sizeof(struct gameState));   // clear the game state
+                                r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
+                                G.coins = playerCoins;
+                                G.supplyCount[supplyPos] = supplyCount;
+                                buyCard(supplyPos, &G);
+                            }
                         }
                     }
                 }
