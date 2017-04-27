@@ -1,0 +1,2020 @@
+Result for running unit tests:
+unittest1.c:
+----------------- unittest1 Testing: buyCard() ----------------
+Test player 0 with -1 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 1 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 1 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 4 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 4 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 7 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 8 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 7 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 8 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 3 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 3 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 6 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 6 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 1 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 1 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 4 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 4 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 7 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 8 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 7 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 8 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with -1 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 2 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 3 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 3 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 5 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 6 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 6 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with -1 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 1 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 1 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 4 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 4 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 7 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 8 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 7 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 8 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 3 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 3 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 6 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 6 coin(s) and 0 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 1 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 1 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 4 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 4 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 7 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 8 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 7 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 8 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with -1 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 2 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 3 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 3 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 5 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 6 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 6 coin(s) and 1 buy(s) in a 2 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with -1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 4 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 4 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 7 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 8 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 7 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 8 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 3 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 3 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 6 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 6 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 4 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 4 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 7 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 8 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 7 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 8 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with -1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 2 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 3 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 3 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 5 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 6 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 6 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with -1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 4 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 4 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 7 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 8 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 7 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 8 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 3 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 3 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 6 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 6 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 4 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 4 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 7 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 8 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 7 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 8 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with -1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 2 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 3 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 3 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 5 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 6 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 6 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with -1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with -1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 4 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 4 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 7 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 8 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 7 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 8 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with -1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with -1 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 3 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 3 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 6 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 6 coin(s) and 0 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with -1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with -1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with 1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with 4 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 4 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with 7 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 8 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 7 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 8 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with -1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with -1 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with 2 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 3 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 3 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with 5 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 6 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 6 coin(s) and 1 buy(s) in a 3 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 4 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 4 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 7 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 8 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 7 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 8 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 3 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 3 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 6 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with 6 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 4 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 4 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 7 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 8 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 7 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 8 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 3 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 3 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 0 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 6 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 0 with 6 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 4 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 4 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 7 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 8 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 7 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 8 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 3 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 3 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 6 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with 6 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 4 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 4 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 7 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 8 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 7 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 8 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 3 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 3 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 1 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 6 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 1 with 6 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 4 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 4 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 7 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 8 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 7 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 8 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 3 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 3 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 6 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with 6 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 2 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with 1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with 4 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 4 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with 7 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 8 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 7 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 8 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 3 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 3 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 2 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 6 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 2 with 6 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 3 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 4 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 4 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 7 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 8 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 7 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 8 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 8, expected = 8
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with -1 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 0 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 3 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 2 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 3 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 3, expected = 3
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 6 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 5 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with 6 coin(s) and 0 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 6, expected = 6
+G.numBuys = 0, expected = 0
+G.phase = 0, expected = 0
+Test player 3 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 0 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 3 with 1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 1, expected = 1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 1 for 2 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 3 with 4 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 4 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 4, expected = 4
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 2 for 5 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 3 with 7 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 8 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 0 left.
+G.coins = 8, expected = 8
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 7 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 7, expected = 7
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 8 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 3 for 8 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 3 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 0 left.
+G.coins = 0, expected = 0
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with -1 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = -1, expected = -1
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 0 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 4 for 0 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 3 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 3 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 0 left.
+G.coins = 3, expected = 3
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 2 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 2, expected = 2
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 3 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 5 for 3 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+Test player 3 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 6 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 0 left.
+G.coins = 6, expected = 6
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 5 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 5, expected = 5
+G.numBuys = 1, expected = 1
+G.phase = 0, expected = 0
+Test player 3 with 6 coin(s) and 1 buy(s) in a 4 player game, attempt to buy card 6 for 6 coins when there is 1 left.
+G.coins = 0, expected = 0
+G.numBuys = 0, expected = 0
+G.phase = 1, expected = 1
+All tests passed!
