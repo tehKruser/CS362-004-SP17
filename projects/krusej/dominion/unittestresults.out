@@ -6873,3 +6873,13 @@ File 'dominion.c'
 Lines executed:18.56% of 582
 Creating 'dominion.c.gcov'
 
+cardtest1.c:
+----------------- cardtest1 Testing: adventurerCard() ----------------
+G.handCount[0]: 7, expected: 7
+
+UNIT TEST cardtest1 COMPLETED: All tests passed!
+
+File 'dominion.c'
+Lines executed:17.70% of 582
+Creating 'dominion.c.gcov'
+
