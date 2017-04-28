@@ -5129,307 +5129,1747 @@ unittest4.c:
 ***Switching to a 2 player game.
 ***Switching to player 0.
 ***trashFlag: 0.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: 7, expected: 7
 G.playedCardCount: 1, expected: 1
+G.handCount[0]: 0, expected: 0
+G.hand[0][0]: -1, expected: -1
+G.hand[0][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 1, expected: 1
+G.hand[0][0]: 8, expected: 8
+G.hand[0][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
-G.playedCards[1]: 8, expected: 8
-G.playedCardCount: 2, expected: 2
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 1, expected: 1
+G.hand[0][1]: -1, expected: -1
+G.hand[0][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 2, expected: 2
+G.hand[0][0]: 9, expected: 9
+G.hand[0][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 2, expected: 2
+G.hand[0][1]: 9, expected: 9
+G.hand[0][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
-G.playedCards[2]: 9, expected: 9
-G.playedCardCount: 3, expected: 3
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 2, expected: 2
+G.hand[0][2]: -1, expected: -1
+G.hand[0][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 3, expected: 3
+G.hand[0][1]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 3, expected: 3
+G.hand[0][2]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
-G.playedCards[3]: -1, expected: -1
-G.playedCardCount: 4, expected: 4
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 3, expected: 3
+G.hand[0][3]: -1, expected: -1
+G.hand[0][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][0]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][1]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][2]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][3]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
-G.playedCards[4]: -1, expected: -1
-G.playedCardCount: 5, expected: 5
+G.playedCards[0]: 11, expected: 11
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][4]: -1, expected: -1
+G.hand[0][4]: -1, expected: -1
 ***trashFlag: 1.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 0, expected: 0
+G.hand[0][0]: -1, expected: -1
+G.hand[0][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 1, expected: 1
+G.hand[0][0]: 8, expected: 8
+G.hand[0][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 1, expected: 1
+G.hand[0][1]: -1, expected: -1
+G.hand[0][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 2, expected: 2
+G.hand[0][0]: 9, expected: 9
+G.hand[0][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 2, expected: 2
+G.hand[0][1]: 9, expected: 9
+G.hand[0][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 2, expected: 2
+G.hand[0][2]: -1, expected: -1
+G.hand[0][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 3, expected: 3
+G.hand[0][1]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 3, expected: 3
+G.hand[0][2]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 3, expected: 3
+G.hand[0][3]: -1, expected: -1
+G.hand[0][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][0]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][1]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][2]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][3]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][4]: -1, expected: -1
+G.hand[0][4]: -1, expected: -1
 ***Switching to player 1.
 ***trashFlag: 0.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: 7, expected: 7
 G.playedCardCount: 1, expected: 1
+G.handCount[1]: 0, expected: 0
+G.hand[1][0]: -1, expected: -1
+G.hand[1][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 1, expected: 1
+G.hand[1][0]: 8, expected: 8
+G.hand[1][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
-G.playedCards[1]: 8, expected: 8
-G.playedCardCount: 2, expected: 2
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 1, expected: 1
+G.hand[1][1]: -1, expected: -1
+G.hand[1][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 2, expected: 2
+G.hand[1][0]: 9, expected: 9
+G.hand[1][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 2, expected: 2
+G.hand[1][1]: 9, expected: 9
+G.hand[1][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
-G.playedCards[2]: 9, expected: 9
-G.playedCardCount: 3, expected: 3
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 2, expected: 2
+G.hand[1][2]: -1, expected: -1
+G.hand[1][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 3, expected: 3
+G.hand[1][0]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 3, expected: 3
+G.hand[1][1]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 3, expected: 3
+G.hand[1][2]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
-G.playedCards[3]: 10, expected: 10
-G.playedCardCount: 4, expected: 4
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 3, expected: 3
+G.hand[1][3]: -1, expected: -1
+G.hand[1][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][0]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][1]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][2]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][3]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
-G.playedCards[4]: 11, expected: 11
-G.playedCardCount: 5, expected: 5
+G.playedCards[0]: 11, expected: 11
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][4]: -1, expected: -1
+G.hand[1][4]: -1, expected: -1
 ***trashFlag: 1.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 0, expected: 0
+G.hand[1][0]: -1, expected: -1
+G.hand[1][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 1, expected: 1
+G.hand[1][0]: 8, expected: 8
+G.hand[1][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 1, expected: 1
+G.hand[1][1]: -1, expected: -1
+G.hand[1][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 2, expected: 2
+G.hand[1][0]: 9, expected: 9
+G.hand[1][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 2, expected: 2
+G.hand[1][1]: 9, expected: 9
+G.hand[1][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 2, expected: 2
+G.hand[1][2]: -1, expected: -1
+G.hand[1][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 3, expected: 3
+G.hand[1][0]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 3, expected: 3
+G.hand[1][1]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 3, expected: 3
+G.hand[1][2]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 3, expected: 3
+G.hand[1][3]: -1, expected: -1
+G.hand[1][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][0]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][1]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][2]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][3]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][4]: -1, expected: -1
+G.hand[1][4]: -1, expected: -1
 ***Switching to a 3 player game.
 ***Switching to player 0.
 ***trashFlag: 0.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: 7, expected: 7
 G.playedCardCount: 1, expected: 1
+G.handCount[0]: 0, expected: 0
+G.hand[0][0]: -1, expected: -1
+G.hand[0][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 1, expected: 1
+G.hand[0][0]: 8, expected: 8
+G.hand[0][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
-G.playedCards[1]: 8, expected: 8
-G.playedCardCount: 2, expected: 2
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 1, expected: 1
+G.hand[0][1]: -1, expected: -1
+G.hand[0][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 2, expected: 2
+G.hand[0][0]: 9, expected: 9
+G.hand[0][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 2, expected: 2
+G.hand[0][1]: 9, expected: 9
+G.hand[0][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
-G.playedCards[2]: 9, expected: 9
-G.playedCardCount: 3, expected: 3
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 2, expected: 2
+G.hand[0][2]: -1, expected: -1
+G.hand[0][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 3, expected: 3
+G.hand[0][1]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 3, expected: 3
+G.hand[0][2]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
-G.playedCards[3]: -1, expected: -1
-G.playedCardCount: 4, expected: 4
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 3, expected: 3
+G.hand[0][3]: -1, expected: -1
+G.hand[0][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][0]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][1]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][2]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][3]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
-G.playedCards[4]: -1, expected: -1
-G.playedCardCount: 5, expected: 5
+G.playedCards[0]: 11, expected: 11
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][4]: -1, expected: -1
+G.hand[0][4]: -1, expected: -1
 ***trashFlag: 1.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 0, expected: 0
+G.hand[0][0]: -1, expected: -1
+G.hand[0][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 1, expected: 1
+G.hand[0][0]: 8, expected: 8
+G.hand[0][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 1, expected: 1
+G.hand[0][1]: -1, expected: -1
+G.hand[0][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 2, expected: 2
+G.hand[0][0]: 9, expected: 9
+G.hand[0][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 2, expected: 2
+G.hand[0][1]: 9, expected: 9
+G.hand[0][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 2, expected: 2
+G.hand[0][2]: -1, expected: -1
+G.hand[0][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 3, expected: 3
+G.hand[0][1]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 3, expected: 3
+G.hand[0][2]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 3, expected: 3
+G.hand[0][3]: -1, expected: -1
+G.hand[0][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][0]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][1]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][2]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][3]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][4]: -1, expected: -1
+G.hand[0][4]: -1, expected: -1
 ***Switching to player 1.
 ***trashFlag: 0.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: 7, expected: 7
 G.playedCardCount: 1, expected: 1
+G.handCount[1]: 0, expected: 0
+G.hand[1][0]: -1, expected: -1
+G.hand[1][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 1, expected: 1
+G.hand[1][0]: 8, expected: 8
+G.hand[1][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
-G.playedCards[1]: 8, expected: 8
-G.playedCardCount: 2, expected: 2
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 1, expected: 1
+G.hand[1][1]: -1, expected: -1
+G.hand[1][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 2, expected: 2
+G.hand[1][0]: 9, expected: 9
+G.hand[1][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 2, expected: 2
+G.hand[1][1]: 9, expected: 9
+G.hand[1][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
-G.playedCards[2]: 9, expected: 9
-G.playedCardCount: 3, expected: 3
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 2, expected: 2
+G.hand[1][2]: -1, expected: -1
+G.hand[1][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 3, expected: 3
+G.hand[1][0]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 3, expected: 3
+G.hand[1][1]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 3, expected: 3
+G.hand[1][2]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
-G.playedCards[3]: 10, expected: 10
-G.playedCardCount: 4, expected: 4
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 3, expected: 3
+G.hand[1][3]: -1, expected: -1
+G.hand[1][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][0]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][1]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][2]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][3]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
-G.playedCards[4]: 11, expected: 11
-G.playedCardCount: 5, expected: 5
+G.playedCards[0]: 11, expected: 11
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][4]: -1, expected: -1
+G.hand[1][4]: -1, expected: -1
 ***trashFlag: 1.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 0, expected: 0
+G.hand[1][0]: -1, expected: -1
+G.hand[1][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 1, expected: 1
+G.hand[1][0]: 8, expected: 8
+G.hand[1][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 1, expected: 1
+G.hand[1][1]: -1, expected: -1
+G.hand[1][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 2, expected: 2
+G.hand[1][0]: 9, expected: 9
+G.hand[1][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 2, expected: 2
+G.hand[1][1]: 9, expected: 9
+G.hand[1][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 2, expected: 2
+G.hand[1][2]: -1, expected: -1
+G.hand[1][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 3, expected: 3
+G.hand[1][0]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 3, expected: 3
+G.hand[1][1]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 3, expected: 3
+G.hand[1][2]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 3, expected: 3
+G.hand[1][3]: -1, expected: -1
+G.hand[1][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][0]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][1]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][2]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][3]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][4]: -1, expected: -1
+G.hand[1][4]: -1, expected: -1
 ***Switching to player 2.
 ***trashFlag: 0.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: 7, expected: 7
 G.playedCardCount: 1, expected: 1
+G.handCount[2]: 0, expected: 0
+G.hand[2][0]: -1, expected: -1
+G.hand[2][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 1, expected: 1
+G.hand[2][0]: 8, expected: 8
+G.hand[2][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
-G.playedCards[1]: 8, expected: 8
-G.playedCardCount: 2, expected: 2
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 1, expected: 1
+G.hand[2][1]: -1, expected: -1
+G.hand[2][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 2, expected: 2
+G.hand[2][0]: 9, expected: 9
+G.hand[2][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 2, expected: 2
+G.hand[2][1]: 9, expected: 9
+G.hand[2][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
-G.playedCards[2]: 9, expected: 9
-G.playedCardCount: 3, expected: 3
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 2, expected: 2
+G.hand[2][2]: -1, expected: -1
+G.hand[2][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 3, expected: 3
+G.hand[2][0]: 10, expected: 10
+G.hand[2][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 3, expected: 3
+G.hand[2][1]: 10, expected: 10
+G.hand[2][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 3, expected: 3
+G.hand[2][2]: 10, expected: 10
+G.hand[2][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
-G.playedCards[3]: 10, expected: 10
-G.playedCardCount: 4, expected: 4
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 3, expected: 3
+G.hand[2][3]: -1, expected: -1
+G.hand[2][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 4, expected: 4
+G.hand[2][0]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 4, expected: 4
+G.hand[2][1]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 4, expected: 4
+G.hand[2][2]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 4, expected: 4
+G.hand[2][3]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
-G.playedCards[4]: 11, expected: 11
-G.playedCardCount: 5, expected: 5
+G.playedCards[0]: 11, expected: 11
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 4, expected: 4
+G.hand[2][4]: -1, expected: -1
+G.hand[2][4]: -1, expected: -1
 ***trashFlag: 1.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[2]: 0, expected: 0
+G.hand[2][0]: -1, expected: -1
+G.hand[2][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 1, expected: 1
+G.hand[2][0]: 8, expected: 8
+G.hand[2][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[2]: 1, expected: 1
+G.hand[2][1]: -1, expected: -1
+G.hand[2][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 2, expected: 2
+G.hand[2][0]: 9, expected: 9
+G.hand[2][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 2, expected: 2
+G.hand[2][1]: 9, expected: 9
+G.hand[2][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[2]: 2, expected: 2
+G.hand[2][2]: -1, expected: -1
+G.hand[2][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 3, expected: 3
+G.hand[2][0]: 10, expected: 10
+G.hand[2][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 3, expected: 3
+G.hand[2][1]: 10, expected: 10
+G.hand[2][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 3, expected: 3
+G.hand[2][2]: 10, expected: 10
+G.hand[2][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[2]: 3, expected: 3
+G.hand[2][3]: -1, expected: -1
+G.hand[2][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 4, expected: 4
+G.hand[2][0]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 4, expected: 4
+G.hand[2][1]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 4, expected: 4
+G.hand[2][2]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 4, expected: 4
+G.hand[2][3]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[2]: 4, expected: 4
+G.hand[2][4]: -1, expected: -1
+G.hand[2][4]: -1, expected: -1
 ***Switching to a 4 player game.
 ***Switching to player 0.
 ***trashFlag: 0.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: 7, expected: 7
 G.playedCardCount: 1, expected: 1
+G.handCount[0]: 0, expected: 0
+G.hand[0][0]: -1, expected: -1
+G.hand[0][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 1, expected: 1
+G.hand[0][0]: 8, expected: 8
+G.hand[0][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
-G.playedCards[1]: 8, expected: 8
-G.playedCardCount: 2, expected: 2
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 1, expected: 1
+G.hand[0][1]: -1, expected: -1
+G.hand[0][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 2, expected: 2
+G.hand[0][0]: 9, expected: 9
+G.hand[0][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 2, expected: 2
+G.hand[0][1]: 9, expected: 9
+G.hand[0][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
-G.playedCards[2]: 9, expected: 9
-G.playedCardCount: 3, expected: 3
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 2, expected: 2
+G.hand[0][2]: -1, expected: -1
+G.hand[0][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 3, expected: 3
+G.hand[0][1]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 3, expected: 3
+G.hand[0][2]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
-G.playedCards[3]: -1, expected: -1
-G.playedCardCount: 4, expected: 4
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 3, expected: 3
+G.hand[0][3]: -1, expected: -1
+G.hand[0][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][0]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][1]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][2]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][3]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
-G.playedCards[4]: -1, expected: -1
-G.playedCardCount: 5, expected: 5
+G.playedCards[0]: 11, expected: 11
+G.playedCardCount: 1, expected: 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][4]: -1, expected: -1
+G.hand[0][4]: -1, expected: -1
 ***trashFlag: 1.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 0, expected: 0
+G.hand[0][0]: -1, expected: -1
+G.hand[0][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 1, expected: 1
+G.hand[0][0]: 8, expected: 8
+G.hand[0][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 1, expected: 1
+G.hand[0][1]: -1, expected: -1
+G.hand[0][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 2, expected: 2
+G.hand[0][0]: 9, expected: 9
+G.hand[0][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 2, expected: 2
+G.hand[0][1]: 9, expected: 9
+G.hand[0][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 2, expected: 2
+G.hand[0][2]: -1, expected: -1
+G.hand[0][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 3, expected: 3
+G.hand[0][1]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 3, expected: 3
+G.hand[0][2]: 10, expected: 10
+G.hand[0][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 3, expected: 3
+G.hand[0][3]: -1, expected: -1
+G.hand[0][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][0]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][1]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][2]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][3]: 11, expected: 11
+G.hand[0][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][4]: -1, expected: -1
+G.hand[0][4]: -1, expected: -1
 ***Switching to player 1.
 ***trashFlag: 0.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: 7, expected: 7
 G.playedCardCount: 1, expected: 1
+G.handCount[1]: 0, expected: 0
+G.hand[1][0]: -1, expected: -1
+G.hand[1][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 1, expected: 1
+G.hand[1][0]: 8, expected: 8
+G.hand[1][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
-G.playedCards[1]: 8, expected: 8
-G.playedCardCount: 2, expected: 2
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 1, expected: 1
+G.hand[1][1]: -1, expected: -1
+G.hand[1][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 2, expected: 2
+G.hand[1][0]: 9, expected: 9
+G.hand[1][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 2, expected: 2
+G.hand[1][1]: 9, expected: 9
+G.hand[1][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
-G.playedCards[2]: 9, expected: 9
-G.playedCardCount: 3, expected: 3
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 2, expected: 2
+G.hand[1][2]: -1, expected: -1
+G.hand[1][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 3, expected: 3
+G.hand[1][0]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 3, expected: 3
+G.hand[1][1]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 3, expected: 3
+G.hand[1][2]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
-G.playedCards[3]: 10, expected: 10
-G.playedCardCount: 4, expected: 4
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 3, expected: 3
+G.hand[1][3]: -1, expected: -1
+G.hand[1][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][0]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][1]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][2]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][3]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
-G.playedCards[4]: 11, expected: 11
-G.playedCardCount: 5, expected: 5
+G.playedCards[0]: 11, expected: 11
+G.playedCardCount: 1, expected: 1
+G.handCount[1]: 4, expected: 4
+G.hand[1][4]: -1, expected: -1
+G.hand[1][4]: -1, expected: -1
 ***trashFlag: 1.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 0, expected: 0
+G.hand[1][0]: -1, expected: -1
+G.hand[1][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 1, expected: 1
+G.hand[1][0]: 8, expected: 8
+G.hand[1][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 1, expected: 1
+G.hand[1][1]: -1, expected: -1
+G.hand[1][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 2, expected: 2
+G.hand[1][0]: 9, expected: 9
+G.hand[1][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 2, expected: 2
+G.hand[1][1]: 9, expected: 9
+G.hand[1][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 2, expected: 2
+G.hand[1][2]: -1, expected: -1
+G.hand[1][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 3, expected: 3
+G.hand[1][0]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 3, expected: 3
+G.hand[1][1]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 3, expected: 3
+G.hand[1][2]: 10, expected: 10
+G.hand[1][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 3, expected: 3
+G.hand[1][3]: -1, expected: -1
+G.hand[1][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][0]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][1]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][2]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][3]: 11, expected: 11
+G.hand[1][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[1]: 4, expected: 4
+G.hand[1][4]: -1, expected: -1
+G.hand[1][4]: -1, expected: -1
 ***Switching to player 2.
 ***trashFlag: 0.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: 7, expected: 7
 G.playedCardCount: 1, expected: 1
+G.handCount[2]: 0, expected: 0
+G.hand[2][0]: -1, expected: -1
+G.hand[2][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 1, expected: 1
+G.hand[2][0]: 8, expected: 8
+G.hand[2][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
-G.playedCards[1]: 8, expected: 8
-G.playedCardCount: 2, expected: 2
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 1, expected: 1
+G.hand[2][1]: -1, expected: -1
+G.hand[2][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 2, expected: 2
+G.hand[2][0]: 9, expected: 9
+G.hand[2][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 2, expected: 2
+G.hand[2][1]: 9, expected: 9
+G.hand[2][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
-G.playedCards[2]: 9, expected: 9
-G.playedCardCount: 3, expected: 3
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 2, expected: 2
+G.hand[2][2]: -1, expected: -1
+G.hand[2][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 3, expected: 3
+G.hand[2][0]: 10, expected: 10
+G.hand[2][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 3, expected: 3
+G.hand[2][1]: 10, expected: 10
+G.hand[2][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 3, expected: 3
+G.hand[2][2]: 10, expected: 10
+G.hand[2][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
-G.playedCards[3]: 10, expected: 10
-G.playedCardCount: 4, expected: 4
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 3, expected: 3
+G.hand[2][3]: -1, expected: -1
+G.hand[2][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 4, expected: 4
+G.hand[2][0]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 4, expected: 4
+G.hand[2][1]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 4, expected: 4
+G.hand[2][2]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 4, expected: 4
+G.hand[2][3]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
-G.playedCards[4]: 11, expected: 11
-G.playedCardCount: 5, expected: 5
+G.playedCards[0]: 11, expected: 11
+G.playedCardCount: 1, expected: 1
+G.handCount[2]: 4, expected: 4
+G.hand[2][4]: -1, expected: -1
+G.hand[2][4]: -1, expected: -1
 ***trashFlag: 1.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[2]: 0, expected: 0
+G.hand[2][0]: -1, expected: -1
+G.hand[2][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 1, expected: 1
+G.hand[2][0]: 8, expected: 8
+G.hand[2][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[2]: 1, expected: 1
+G.hand[2][1]: -1, expected: -1
+G.hand[2][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 2, expected: 2
+G.hand[2][0]: 9, expected: 9
+G.hand[2][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 2, expected: 2
+G.hand[2][1]: 9, expected: 9
+G.hand[2][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[2]: 2, expected: 2
+G.hand[2][2]: -1, expected: -1
+G.hand[2][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 3, expected: 3
+G.hand[2][0]: 10, expected: 10
+G.hand[2][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 3, expected: 3
+G.hand[2][1]: 10, expected: 10
+G.hand[2][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 3, expected: 3
+G.hand[2][2]: 10, expected: 10
+G.hand[2][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[2]: 3, expected: 3
+G.hand[2][3]: -1, expected: -1
+G.hand[2][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 4, expected: 4
+G.hand[2][0]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 4, expected: 4
+G.hand[2][1]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 4, expected: 4
+G.hand[2][2]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[2]: 4, expected: 4
+G.hand[2][3]: 11, expected: 11
+G.hand[2][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[2]: 4, expected: 4
+G.hand[2][4]: -1, expected: -1
+G.hand[2][4]: -1, expected: -1
 ***Switching to player 3.
 ***trashFlag: 0.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: 7, expected: 7
 G.playedCardCount: 1, expected: 1
+G.handCount[3]: 0, expected: 0
+G.hand[3][0]: -1, expected: -1
+G.hand[3][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 1, expected: 1
+G.hand[3][0]: 8, expected: 8
+G.hand[3][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
-G.playedCards[1]: 8, expected: 8
-G.playedCardCount: 2, expected: 2
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 1, expected: 1
+G.hand[3][1]: -1, expected: -1
+G.hand[3][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 2, expected: 2
+G.hand[3][0]: 9, expected: 9
+G.hand[3][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 2, expected: 2
+G.hand[3][1]: 9, expected: 9
+G.hand[3][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
-G.playedCards[2]: 9, expected: 9
-G.playedCardCount: 3, expected: 3
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 2, expected: 2
+G.hand[3][2]: -1, expected: -1
+G.hand[3][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 3, expected: 3
+G.hand[3][0]: 10, expected: 10
+G.hand[3][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 3, expected: 3
+G.hand[3][1]: 10, expected: 10
+G.hand[3][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 3, expected: 3
+G.hand[3][2]: 10, expected: 10
+G.hand[3][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
-G.playedCards[3]: 10, expected: 10
-G.playedCardCount: 4, expected: 4
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 3, expected: 3
+G.hand[3][3]: -1, expected: -1
+G.hand[3][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: 7, expected: 7
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 4, expected: 4
+G.hand[3][0]: 11, expected: 11
+G.hand[3][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: 8, expected: 8
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 4, expected: 4
+G.hand[3][1]: 11, expected: 11
+G.hand[3][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: 9, expected: 9
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 4, expected: 4
+G.hand[3][2]: 11, expected: 11
+G.hand[3][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: 10, expected: 10
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 4, expected: 4
+G.hand[3][3]: 11, expected: 11
+G.hand[3][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
-G.playedCards[4]: 11, expected: 11
-G.playedCardCount: 5, expected: 5
+G.playedCards[0]: 11, expected: 11
+G.playedCardCount: 1, expected: 1
+G.handCount[3]: 4, expected: 4
+G.hand[3][4]: -1, expected: -1
+G.hand[3][4]: -1, expected: -1
 ***trashFlag: 1.
+***Cards in Hand: 1.
 ***Discarding card at position 0 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[3]: 0, expected: 0
+G.hand[3][0]: -1, expected: -1
+G.hand[3][0]: -1, expected: -1
+***Cards in Hand: 2.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[3]: 1, expected: 1
+G.hand[3][0]: 8, expected: 8
+G.hand[3][1]: -1, expected: -1
 ***Discarding card at position 1 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[3]: 1, expected: 1
+G.hand[3][1]: -1, expected: -1
+G.hand[3][1]: -1, expected: -1
+***Cards in Hand: 3.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[3]: 2, expected: 2
+G.hand[3][0]: 9, expected: 9
+G.hand[3][2]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[3]: 2, expected: 2
+G.hand[3][1]: 9, expected: 9
+G.hand[3][2]: -1, expected: -1
 ***Discarding card at position 2 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[3]: 2, expected: 2
+G.hand[3][2]: -1, expected: -1
+G.hand[3][2]: -1, expected: -1
+***Cards in Hand: 4.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[3]: 3, expected: 3
+G.hand[3][0]: 10, expected: 10
+G.hand[3][3]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[3]: 3, expected: 3
+G.hand[3][1]: 10, expected: 10
+G.hand[3][3]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[3]: 3, expected: 3
+G.hand[3][2]: 10, expected: 10
+G.hand[3][3]: -1, expected: -1
 ***Discarding card at position 3 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[3]: 3, expected: 3
+G.hand[3][3]: -1, expected: -1
+G.hand[3][3]: -1, expected: -1
+***Cards in Hand: 5.
+***Discarding card at position 0 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[3]: 4, expected: 4
+G.hand[3][0]: 11, expected: 11
+G.hand[3][4]: -1, expected: -1
+***Discarding card at position 1 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[3]: 4, expected: 4
+G.hand[3][1]: 11, expected: 11
+G.hand[3][4]: -1, expected: -1
+***Discarding card at position 2 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[3]: 4, expected: 4
+G.hand[3][2]: 11, expected: 11
+G.hand[3][4]: -1, expected: -1
+***Discarding card at position 3 in hand.
+G.playedCards[0]: -1, expected: -1
+G.playedCardCount: 0, expected: 0
+G.handCount[3]: 4, expected: 4
+G.hand[3][3]: 11, expected: 11
+G.hand[3][4]: -1, expected: -1
 ***Discarding card at position 4 in hand.
 G.playedCards[0]: -1, expected: -1
 G.playedCardCount: 0, expected: 0
+G.handCount[3]: 4, expected: 4
+G.hand[3][4]: -1, expected: -1
+G.hand[3][4]: -1, expected: -1
 
 UNIT TEST unittest4 COMPLETED: All tests passed!
 
 File 'dominion.c'
-Lines executed:18.73% of 582
+Lines executed:18.56% of 582
 Creating 'dominion.c.gcov'
 

@@ -29,7 +29,9 @@
 int main() {
     int assertEqual(int v1, int v2);
 
-    int i, p, numPlayers, trashFlag, handPos, cardsInHand, index, lastPos, expected_playedCardCount, expected_lastPlayedCard;
+    int i, p, numPlayers, trashFlag, handPos, cardsInHand, index
+        , expected_playedCardCount, expected_lastPlayedCard
+        , expected_handCount, expected_cardInHandPos, expected_lastCardInHand;
     int seed = 1000;
     int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
 
@@ -54,7 +56,9 @@ int main() {
                 printf("\n***trashFlag: %d.", trashFlag);
 #endif
                 for(cardsInHand = 1; cardsInHand <= 5; cardsInHand++){
-
+#if (NOISY_TEST == 1)
+                printf("\n***Cards in Hand: %d.", cardsInHand);
+#endif
                     // Discard each card in a player's hand
                     for(handPos = 0; handPos < cardsInHand; handPos++){
 #if (NOISY_TEST == 1)
@@ -90,14 +94,17 @@ int main() {
                         }
 
                         // -------------- player Hand: Expected Values after discardCard() --------------
-                        expected_handCount = G.handCount[p] - 1;
-
-                        if(handPos < 4){
-                            expected_cardInHandPos = G.hand[p][4];
+                        expected_handCount = cardsInHand - 1;
+                        if(handPos == (cardsInHand - 1)){               //if handPos is last card in hand
+                            expected_cardInHandPos = -1;
+                            expected_lastCardInHand = -1;
+                        } else if ((cardsInHand == 1)){                 // if there is only 1 card in hand
+                            expected_cardInHandPos = -1;
+                            expected_lastCardInHand = -1;
                         } else {
-                            expected_cardInHandPos = - 1;
+                            expected_cardInHandPos = G.hand[p][cardsInHand - 1];
+                            expected_lastCardInHand = -1;
                         }
-
 
                         // discard
                         discardCard(handPos, p, &G, trashFlag);
@@ -112,6 +119,21 @@ int main() {
                         printf("\nG.playedCardCount: %d, expected: %d", G.playedCardCount, expected_playedCardCount);
 #endif
                         testFailures += assertEqual(G.playedCardCount, expected_playedCardCount);
+
+#if (NOISY_TEST == 1)
+                        printf("\nG.handCount[%d]: %d, expected: %d", p, G.handCount[p], expected_handCount);
+#endif
+                        testFailures += assertEqual(G.handCount[p], expected_handCount);
+
+#if (NOISY_TEST == 1)
+                        printf("\nG.hand[%d][%d]: %d, expected: %d", p, handPos, G.hand[p][handPos], expected_cardInHandPos);
+#endif
+                        testFailures += assertEqual(G.hand[p][handPos], expected_cardInHandPos);
+
+#if (NOISY_TEST == 1)
+                        printf("\nG.hand[%d][%d]: %d, expected: %d", p, cardsInHand -1, G.hand[p][cardsInHand -1], expected_lastCardInHand);
+#endif
+                        testFailures += assertEqual(G.hand[p][cardsInHand -1], expected_lastCardInHand);
 
                     }
                 }
