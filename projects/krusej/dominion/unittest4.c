@@ -30,7 +30,7 @@ int main() {
     int assertEqual(int v1, int v2);
 
     int i, p, numPlayers, trashFlag, handPos, cardsInHand, index
-        , expected_playedCardCount, expected_lastPlayedCard
+        , expected_discardCount, expected_discardedCard
         , expected_handCount, expected_cardInHandPos, expected_lastCardInHand;
     int seed = 1000;
     int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
@@ -75,22 +75,22 @@ int main() {
                             G.hand[p][i] = k[i];
                         }
                         // Set the first played card to a value for testing against
-                        G.playedCards[0] = -1;
+                        G.discard[p][0] = -1;
 
                         // -------------- trashFlag:  Expected Values after discardCard() --------------
                         if(trashFlag == 0){
-                            expected_lastPlayedCard = G.hand[p][handPos];
-                            expected_playedCardCount = G.playedCardCount + 1;
-                            index = G.playedCardCount;
+                            expected_discardedCard = G.hand[p][handPos];
+                            expected_discardCount = G.discardCount[p] + 1;
+                            index = G.discardCount[p];
                         } else {
-                            if(G.playedCardCount == 0){
-                                expected_lastPlayedCard = -1;
+                            if(G.discardCount[p] == 0){
+                                expected_discardedCard = -1;
                                 index = 0;
                             } else {
-                                expected_lastPlayedCard = G.playedCards[G.playedCardCount - 1];
-                                index = G.playedCardCount - 1;
+                                expected_discardedCard = G.discard[p][G.discardCount[p] - 1];
+                                index = G.discardCount[p] - 1;
                             }
-                            expected_playedCardCount = G.playedCardCount;
+                            expected_discardCount = G.discardCount[p];
                         }
 
                         // -------------- player Hand: Expected Values after discardCard() --------------
@@ -111,14 +111,14 @@ int main() {
 
                         // test
 #if (NOISY_TEST == 1)
-                        printf("\nG.playedCards[%d]: %d, expected: %d", index, G.playedCards[index], expected_lastPlayedCard);
+                        printf("\nG.discard[%d][%d]: %d, expected: %d", p, index, G.discard[p][index], expected_discardedCard);
 #endif
-                        testFailures += assertEqual(G.playedCards[index], expected_lastPlayedCard);
+                        testFailures += assertEqual(G.discard[p][index], expected_discardedCard);
 
 #if (NOISY_TEST == 1)
-                        printf("\nG.playedCardCount: %d, expected: %d", G.playedCardCount, expected_playedCardCount);
+                        printf("\nG.discardCount[p]: %d, expected: %d", G.discardCount[p], expected_discardCount);
 #endif
-                        testFailures += assertEqual(G.playedCardCount, expected_playedCardCount);
+                        testFailures += assertEqual(G.discardCount[p], expected_discardCount);
 
 #if (NOISY_TEST == 1)
                         printf("\nG.handCount[%d]: %d, expected: %d", p, G.handCount[p], expected_handCount);

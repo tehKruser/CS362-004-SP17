@@ -1,5 +1,5 @@
 /*
- * cardtest1.c
+ * cardtest2.c
  *
 
  */
@@ -7,8 +7,8 @@
 /*
  * Include the following lines in your makefile:
  *
- * cardtest1: cardtest1.c dominion.o rngs.o
- *      gcc -o cardtest1 -g  cardtest1.c dominion.o rngs.o $(CFLAGS)
+ * cardtest2: cardtest2.c dominion.o rngs.o
+ *      gcc -o cardtest2 -g  cardtest2.c dominion.o rngs.o $(CFLAGS)
  */
 
 
@@ -20,77 +20,42 @@
 #include "rngs.h"
 #include <stdlib.h>
 
-#define UNITTEST "cardtest1"
-#define FUNCTEST "adventurerCard()"
+#define UNITTEST "cardtest2"
+#define FUNCTEST "smithyCard()"
 
 // set NOISY_TEST to 0 to remove printfs from output
 #define NOISY_TEST 1
 
 struct card_test{
-    char* description;
-    int handCount;
-    int treasureCards[2];
     int deck[6];
     int deckCount;      // post count
-    int discard[4];
-    int discardCount;   // post count
+    int newCards[3];
 };
 
 int main() {
     int assertEqual(int v1, int v2);
     //int run_test(int* test_hand, int* test_deck, int* test_discard, int test_discardCount, char* test_desc);
-    int run_test(int* test_hand, struct card_test* ct);
+    int run_test(int handPos, int* test_hand, struct card_test* ct);
 
-    int test_hand[5] = {adventurer, council_room, feast, gardens, mine};
+    //int test_hand[5] = {adventurer, council_room, feast, gardens, mine};
+    int handPos;
 
     // last two cards are treasure
     struct card_test test1 = {
-        "\nTEST 1: LAST 2 CARDS ARE TREASURE",
-        7,
-        {silver, copper},
-        {copper, silver, remodel, smithy, village, baron},
-        0,
-        {remodel, smithy, village, baron},
-        4 };
-
-    // first two cards are treasure
-    struct card_test test2 = {
-        "\nTEST 2: FIRST 2 CARDS ARE TREASURE",
-        7,
-        {gold, copper},
-        {remodel, smithy, village, baron, copper, gold},
-        4,
-        {-1, -1, -1, -1},
-        0 };
-
-    // treasure cards are first and last
-    struct card_test test3 = {
-        "\nTEST 3: FIRST AND LAST CARDS ARE TREASURE",
-        7,
-        {gold, silver},
-        {silver, remodel, smithy, village, baron, gold},
-        0,
-        {remodel, smithy, village, baron},
-        4 };
-
-    // treasure cards are in the middle
-    struct card_test test4 = {
-        "\nTEST 4: TREASURE CARDS ARE IN THE MIDDLE",
-        7,
-        {silver, silver},
-        {remodel, silver, smithy, village, silver, baron},
-        1,
-        {smithy, village, baron, -1},
-        3 };
+        {copper, silver, remodel, gold, village, baron},
+        3,
+        {baron, village, gold}
+        };
 
     printf("----------------- %s Testing: %s ----------------", UNITTEST, FUNCTEST);
 
     int testFailures = 0;
-    testFailures += run_test(test_hand, &test1);
-    testFailures += run_test(test_hand, &test2);
-    testFailures += run_test(test_hand, &test3);
-    testFailures += run_test(test_hand, &test4);
 
+    for(handPos = 0; handPos < 5; handPos++){
+        int test_hand[5] = {adventurer, council_room, feast, gardens, mine};
+        test_hand[handPos] = smithy;
+        testFailures += run_test(handPos, test_hand, &test1);
+    }
 
     printf("\n\nUNIT TEST %s COMPLETED: ", UNITTEST);
 
@@ -115,7 +80,7 @@ int assertEqual(int v1, int v2){
 }
 
 
-int run_test(int* test_hand, struct card_test* ct){
+int run_test(int handPos, int* test_hand, struct card_test* ct){
 
     int seed = 1000;
     int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
@@ -145,29 +110,45 @@ int run_test(int* test_hand, struct card_test* ct){
     G.discardCount[p] = 0;
 
     // run card
-    adventurerCard(&G);
+    smithyCard(&G, handPos);
 
     //--------------------------------------------------------
     // test for correct results
-    printf(ct->description);
+    printf("\nTEST %d: SMITHY CARD AT HANDPOS %d", handPos+1, handPos);
 
     //--------------------------------------------------------
     // Number of cards in hand
+    failcount = failures;
 #if (NOISY_TEST == 1)
     printf("\nG.handCount[%d]: %d, expected: %d", p, G.handCount[p], 7);
 #endif
     failures += assertEqual(G.handCount[p], 7);
 
     //--------------------------------------------------------
-    // Correct treasure cards in hand
+    // Correct cards in hand
+    if(failures - failcount == 0){
+        int index = 0;
+        int card;
+        for(i = 0; i < 5; i++){
+            if(i == handPos){
+                card = ct->newCards[2];
+            } else {
+                card = test_hand[i];
+            }
+
 #if (NOISY_TEST == 1)
-    printf("\nG.hand[%d][%d]: %d, expected: %d", p, 5, G.hand[p][5], ct->treasureCards[0]);
+            printf("\nG.hand[%d][%d]: %d, expected: %d", p, i, G.hand[p][i], card);
 #endif
-    failures += assertEqual(G.hand[p][5], ct->treasureCards[0]);
+            failures += assertEqual(G.hand[p][i], card);
+            index++;
+        }
+        for(i = 5; i < 7; i++){
 #if (NOISY_TEST == 1)
-    printf("\nG.hand[%d][%d]: %d, expected: %d", p, 6, G.hand[p][6], ct->treasureCards[1]);
+            printf("\nG.hand[%d][%d]: %d, expected: %d", p, i, G.hand[p][i], ct->newCards[i-5]);
 #endif
-    failures += assertEqual(G.hand[p][6], ct->treasureCards[1]);
+            failures += assertEqual(G.hand[p][i], ct->newCards[i-5]);
+        }
+    }
 
     //--------------------------------------------------------
     // Number of cards in deck
@@ -192,19 +173,17 @@ int run_test(int* test_hand, struct card_test* ct){
     // Number of cards in discard
     failcount = failures;
 #if (NOISY_TEST == 1)
-    printf("\nG.discardCount[%d]: %d, expected: %d", p, G.discardCount[p], ct->discardCount);
+    printf("\nG.discardCount[%d]: %d, expected: %d", p, G.discardCount[p], 1);
 #endif
-    failures += assertEqual(G.discardCount[p], ct->discardCount);
+    failures += assertEqual(G.discardCount[p], 1);
 
     //--------------------------------------------------------
     // Check cards in discard pile
-    if(failcount - failures == 0 && ct->discardCount != 0){
-        for(i = 0; i < ct->discardCount; i++){
+    if(failcount - failures == 0){
 #if (NOISY_TEST == 1)
-            printf("\nG.discard[%d][%d]: %d, expected: %d", p, i, G.discard[p][i], ct->discard[i]);
+        printf("\nG.discard[%d][0]: %d, expected: %d", p, G.discard[p][0], smithy);
 #endif
-            failures += assertEqual(G.discard[p][i], ct->discard[i]);
-        }
+        failures += assertEqual(G.discard[p][0], smithy);
     }
 
     return failures;

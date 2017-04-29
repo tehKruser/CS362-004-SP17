@@ -1112,8 +1112,9 @@ int adventurerCard(struct gameState *state)
         }
         drawCard(currentPlayer, state);
         cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-        //if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+        //
         /** Bug: replaced 'cardDrawn == copper' with '(cardDrawn = copper)' **/
+        //if (cardDrawn = copper || cardDrawn == silver || cardDrawn == gold)
         if (cardDrawn = copper || cardDrawn == silver || cardDrawn == gold)
           drawntreasure++;
         else{
@@ -1136,19 +1137,11 @@ int smithyCard(struct gameState *state, int handPos)
     int currentPlayer = whoseTurn(state);
       //+3 Cards
       //for (i = 0; i < 3; i++)
-      /** Bug: replaced 'i < 3' with 'i > 3' **/
-      for (i = 0; i > 3; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
-
-      //discard card from hand
-      //+3 Cards
+      /** Bug: replaced 'i < 3' with 'i <= 3' **/
       for (i = 0; i < 3; i++)
 	{
 	  drawCard(currentPlayer, state);
 	}
-
       //discard card from hand
       discardCard(handPos, currentPlayer, state, 0);
       return 0;
@@ -1168,7 +1161,7 @@ int mineCard(struct gameState *state, int choice1, int choice2, int handPos)
 
     //if (choice2 > treasure_map || choice2 < curse)
     /** Bug: replaced '||' with '&&' **/
-      if (choice2 > treasure_map && choice2 < curse)
+      if (choice2 > treasure_map || choice2 < curse)
 	{
 	  return -1;
 	}
