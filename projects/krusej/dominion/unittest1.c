@@ -45,7 +45,7 @@ int main() {
          for (p = 0; p < numPlayer; p++) {
             for(playerBuys = 0; playerBuys <= 1; playerBuys++){
 
-                // iterate through normal cards (need to iterate through cards in k)!!!!!
+                // iterate through normal cards
                 for(cardNumber = curse; cardNumber <= gold; cardNumber++){
                     cardCost = getCost(cardNumber);
                     for(supplyCount = 0; supplyCount <= 1; supplyCount++){

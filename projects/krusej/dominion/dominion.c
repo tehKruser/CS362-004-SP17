@@ -645,13 +645,6 @@ int getCost(int cardNumber)
 
 int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus)
 {
-  // function prototypes for cards
-  int adventurerCard(struct gameState *state);
-  int smithyCard(struct gameState *state, int handPos);
-  int mineCard(struct gameState *state, int choice1, int choice2, int handPos);
-  int council_roomCard(struct gameState *state, int handPos);
-  int feastCard(struct gameState *state, int choice1, int handPos);
-
   int i;
   int j;
   int k;
