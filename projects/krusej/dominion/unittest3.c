@@ -32,6 +32,7 @@ int main() {
     int i, p, p_next, numPlayers;
     int seed = 1000;
     int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
+    int test_hand[5] = {adventurer, council_room, feast, gardens, mine};
 
     struct gameState G;
     int testFailures = 0;
@@ -45,25 +46,43 @@ int main() {
         memset(&G, 23, sizeof(struct gameState));   // clear the game state
         initializeGame(numPlayers, k, seed, &G); // initialize a new game
         for (p = 0; p < numPlayers; p++) {
+            for(i = 0; i < 5; i++){
+                G.hand[p][i] = test_hand[i];
+            }
 #if (NOISY_TEST == 1)
             printf("\n***Ending turn for player %d.", p);
 #endif
             G.whoseTurn = p;
             endTurn(&G);
 
+#if (NOISY_TEST == 1)
+            //printf("\nTest that player whose turn ended 0 cards in hand.");
+            printf("\nG.handCount[%d]: %d, expected: 0", p, G.handCount[p]);
+#endif
+            testFailures += assertEqual(G.handCount[p], 0);
+
+            //printf("\nTest that player whose turn ended has discarded hand.");
             for(i = 0; i < 5 ; i++){
 #if (NOISY_TEST == 1)
-                printf("\nTest that player whose turn ended has discarded hand.");
                 printf("\nG.hand[%d][%d]: %d, expected: -1", p, i, G.hand[p][i]);
 #endif
                 testFailures += assertEqual(G.hand[p][i], -1);
             }
 
 #if (NOISY_TEST == 1)
-            printf("\nTest that player whose turn ended 0 cards in hand.");
-            printf("\nG.handCount[%d]: %d, expected: 0", p, G.handCount[p]);
+            //printf("\nTest that player whose turn ended 0 cards in hand.");
+            printf("\nG.discardCount[%d]: %d, expected: 5", p, G.discardCount[p]);
 #endif
-            testFailures += assertEqual(G.handCount[p], 0);
+            testFailures += assertEqual(G.discardCount[p], 5);
+
+            //printf("\nTest that player whose turn ended has correct cards in discard.");
+            for(i = 0; i < 5 ; i++){
+#if (NOISY_TEST == 1)
+
+                printf("\nG.discard[%d][%d]: %d, expected: %d", p, i, G.discard[p][i], test_hand[i]);
+#endif
+                testFailures += assertEqual(G.discard[p][i], test_hand[i]);
+            }
 
             //Determine whose turn it is
             if(p < numPlayers - 1) {
@@ -73,7 +92,7 @@ int main() {
             }
 
 #if (NOISY_TEST == 1)
-            printf("\nTest next player and game values.");
+            //printf("\nTest next player and game values.");
             printf("\nG.whoseTurn: %d, expected: %d", G.whoseTurn, p_next);
 #endif
             testFailures += assertEqual(G.whoseTurn, p_next);
@@ -99,12 +118,6 @@ int main() {
             printf("\nG.numActions: %d, expected: %d", G.numActions, expected_numActions);
 #endif
             testFailures += assertEqual(G.numActions, expected_numActions);
-/*
-#if (NOISY_TEST == 1)
-            printf("\nG.coins: %d, expected: %d", G.coins, expected_coins);
-#endif
-            testFailures += assertEqual(G.coins, expected_coins);
-*/
 
 #if (NOISY_TEST == 1)
             printf("\nG.numBuys: %d, expected: %d", G.numBuys, expected_numBuys);

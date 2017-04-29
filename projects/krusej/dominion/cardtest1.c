@@ -38,7 +38,6 @@ struct card_test{
 
 int main() {
     int assertEqual(int v1, int v2);
-    //int run_test(int* test_hand, int* test_deck, int* test_discard, int test_discardCount, char* test_desc);
     int run_test(int* test_hand, struct card_test* ct);
 
     int test_hand[5] = {adventurer, council_room, feast, gardens, mine};

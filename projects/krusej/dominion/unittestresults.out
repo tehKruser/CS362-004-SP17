@@ -4927,19 +4927,18 @@ unittest3.c:
 ----------------- unittest3 Testing: endTurn() ----------------
 ***Switching to a 2 player game.
 ***Ending turn for player 0.
-Test that player whose turn ended has discarded hand.
-G.hand[0][0]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[0][1]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[0][2]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[0][3]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[0][4]: -1, expected: -1
-Test that player whose turn ended 0 cards in hand.
 G.handCount[0]: 0, expected: 0
-Test next player and game values.
+G.hand[0][0]: -1, expected: -1
+G.hand[0][1]: -1, expected: -1
+G.hand[0][2]: -1, expected: -1
+G.hand[0][3]: -1, expected: -1
+G.hand[0][4]: -1, expected: -1
+G.discardCount[0]: 5, expected: 5
+G.discard[0][0]: 7, expected: 7
+G.discard[0][1]: 8, expected: 8
+G.discard[0][2]: 9, expected: 9
+G.discard[0][3]: 10, expected: 10
+G.discard[0][4]: 11, expected: 11
 G.whoseTurn: 1, expected: 1
 G.outpostPlayed: 0, expected: 0
 G.phase: 0, expected: 0
@@ -4948,19 +4947,18 @@ G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
 ***Ending turn for player 1.
-Test that player whose turn ended has discarded hand.
-G.hand[1][0]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[1][1]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[1][2]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[1][3]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[1][4]: -1, expected: -1
-Test that player whose turn ended 0 cards in hand.
 G.handCount[1]: 0, expected: 0
-Test next player and game values.
+G.hand[1][0]: -1, expected: -1
+G.hand[1][1]: -1, expected: -1
+G.hand[1][2]: -1, expected: -1
+G.hand[1][3]: -1, expected: -1
+G.hand[1][4]: -1, expected: -1
+G.discardCount[1]: 5, expected: 5
+G.discard[1][0]: 7, expected: 7
+G.discard[1][1]: 8, expected: 8
+G.discard[1][2]: 9, expected: 9
+G.discard[1][3]: 10, expected: 10
+G.discard[1][4]: 11, expected: 11
 G.whoseTurn: 0, expected: 0
 G.outpostPlayed: 0, expected: 0
 G.phase: 0, expected: 0
@@ -4970,19 +4968,18 @@ G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
 ***Switching to a 3 player game.
 ***Ending turn for player 0.
-Test that player whose turn ended has discarded hand.
-G.hand[0][0]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[0][1]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[0][2]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[0][3]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[0][4]: -1, expected: -1
-Test that player whose turn ended 0 cards in hand.
 G.handCount[0]: 0, expected: 0
-Test next player and game values.
+G.hand[0][0]: -1, expected: -1
+G.hand[0][1]: -1, expected: -1
+G.hand[0][2]: -1, expected: -1
+G.hand[0][3]: -1, expected: -1
+G.hand[0][4]: -1, expected: -1
+G.discardCount[0]: 5, expected: 5
+G.discard[0][0]: 7, expected: 7
+G.discard[0][1]: 8, expected: 8
+G.discard[0][2]: 9, expected: 9
+G.discard[0][3]: 10, expected: 10
+G.discard[0][4]: 11, expected: 11
 G.whoseTurn: 1, expected: 1
 G.outpostPlayed: 0, expected: 0
 G.phase: 0, expected: 0
@@ -4991,19 +4988,18 @@ G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
 ***Ending turn for player 1.
-Test that player whose turn ended has discarded hand.
-G.hand[1][0]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[1][1]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[1][2]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[1][3]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[1][4]: -1, expected: -1
-Test that player whose turn ended 0 cards in hand.
 G.handCount[1]: 0, expected: 0
-Test next player and game values.
+G.hand[1][0]: -1, expected: -1
+G.hand[1][1]: -1, expected: -1
+G.hand[1][2]: -1, expected: -1
+G.hand[1][3]: -1, expected: -1
+G.hand[1][4]: -1, expected: -1
+G.discardCount[1]: 5, expected: 5
+G.discard[1][0]: 7, expected: 7
+G.discard[1][1]: 8, expected: 8
+G.discard[1][2]: 9, expected: 9
+G.discard[1][3]: 10, expected: 10
+G.discard[1][4]: 11, expected: 11
 G.whoseTurn: 2, expected: 2
 G.outpostPlayed: 0, expected: 0
 G.phase: 0, expected: 0
@@ -5012,19 +5008,18 @@ G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
 ***Ending turn for player 2.
-Test that player whose turn ended has discarded hand.
-G.hand[2][0]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[2][1]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[2][2]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[2][3]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[2][4]: -1, expected: -1
-Test that player whose turn ended 0 cards in hand.
 G.handCount[2]: 0, expected: 0
-Test next player and game values.
+G.hand[2][0]: -1, expected: -1
+G.hand[2][1]: -1, expected: -1
+G.hand[2][2]: -1, expected: -1
+G.hand[2][3]: -1, expected: -1
+G.hand[2][4]: -1, expected: -1
+G.discardCount[2]: 5, expected: 5
+G.discard[2][0]: 7, expected: 7
+G.discard[2][1]: 8, expected: 8
+G.discard[2][2]: 9, expected: 9
+G.discard[2][3]: 10, expected: 10
+G.discard[2][4]: 11, expected: 11
 G.whoseTurn: 0, expected: 0
 G.outpostPlayed: 0, expected: 0
 G.phase: 0, expected: 0
@@ -5034,19 +5029,18 @@ G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
 ***Switching to a 4 player game.
 ***Ending turn for player 0.
-Test that player whose turn ended has discarded hand.
-G.hand[0][0]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[0][1]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[0][2]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[0][3]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[0][4]: -1, expected: -1
-Test that player whose turn ended 0 cards in hand.
 G.handCount[0]: 0, expected: 0
-Test next player and game values.
+G.hand[0][0]: -1, expected: -1
+G.hand[0][1]: -1, expected: -1
+G.hand[0][2]: -1, expected: -1
+G.hand[0][3]: -1, expected: -1
+G.hand[0][4]: -1, expected: -1
+G.discardCount[0]: 5, expected: 5
+G.discard[0][0]: 7, expected: 7
+G.discard[0][1]: 8, expected: 8
+G.discard[0][2]: 9, expected: 9
+G.discard[0][3]: 10, expected: 10
+G.discard[0][4]: 11, expected: 11
 G.whoseTurn: 1, expected: 1
 G.outpostPlayed: 0, expected: 0
 G.phase: 0, expected: 0
@@ -5055,19 +5049,18 @@ G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
 ***Ending turn for player 1.
-Test that player whose turn ended has discarded hand.
-G.hand[1][0]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[1][1]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[1][2]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[1][3]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[1][4]: -1, expected: -1
-Test that player whose turn ended 0 cards in hand.
 G.handCount[1]: 0, expected: 0
-Test next player and game values.
+G.hand[1][0]: -1, expected: -1
+G.hand[1][1]: -1, expected: -1
+G.hand[1][2]: -1, expected: -1
+G.hand[1][3]: -1, expected: -1
+G.hand[1][4]: -1, expected: -1
+G.discardCount[1]: 5, expected: 5
+G.discard[1][0]: 7, expected: 7
+G.discard[1][1]: 8, expected: 8
+G.discard[1][2]: 9, expected: 9
+G.discard[1][3]: 10, expected: 10
+G.discard[1][4]: 11, expected: 11
 G.whoseTurn: 2, expected: 2
 G.outpostPlayed: 0, expected: 0
 G.phase: 0, expected: 0
@@ -5076,19 +5069,18 @@ G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
 ***Ending turn for player 2.
-Test that player whose turn ended has discarded hand.
-G.hand[2][0]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[2][1]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[2][2]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[2][3]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[2][4]: -1, expected: -1
-Test that player whose turn ended 0 cards in hand.
 G.handCount[2]: 0, expected: 0
-Test next player and game values.
+G.hand[2][0]: -1, expected: -1
+G.hand[2][1]: -1, expected: -1
+G.hand[2][2]: -1, expected: -1
+G.hand[2][3]: -1, expected: -1
+G.hand[2][4]: -1, expected: -1
+G.discardCount[2]: 5, expected: 5
+G.discard[2][0]: 7, expected: 7
+G.discard[2][1]: 8, expected: 8
+G.discard[2][2]: 9, expected: 9
+G.discard[2][3]: 10, expected: 10
+G.discard[2][4]: 11, expected: 11
 G.whoseTurn: 3, expected: 3
 G.outpostPlayed: 0, expected: 0
 G.phase: 0, expected: 0
@@ -5097,19 +5089,18 @@ G.numBuys: 1, expected: 1
 G.playedCardCount: 0, expected: 0
 G.handCount[G.whoseTurn]: 5, expected: 5
 ***Ending turn for player 3.
-Test that player whose turn ended has discarded hand.
-G.hand[3][0]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[3][1]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[3][2]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[3][3]: -1, expected: -1
-Test that player whose turn ended has discarded hand.
-G.hand[3][4]: -1, expected: -1
-Test that player whose turn ended 0 cards in hand.
 G.handCount[3]: 0, expected: 0
-Test next player and game values.
+G.hand[3][0]: -1, expected: -1
+G.hand[3][1]: -1, expected: -1
+G.hand[3][2]: -1, expected: -1
+G.hand[3][3]: -1, expected: -1
+G.hand[3][4]: -1, expected: -1
+G.discardCount[3]: 5, expected: 5
+G.discard[3][0]: 7, expected: 7
+G.discard[3][1]: 8, expected: 8
+G.discard[3][2]: 9, expected: 9
+G.discard[3][3]: 10, expected: 10
+G.discard[3][4]: 11, expected: 11
 G.whoseTurn: 0, expected: 0
 G.outpostPlayed: 0, expected: 0
 G.phase: 0, expected: 0
@@ -6987,5 +6978,288 @@ UNIT TEST cardtest2 COMPLETED: 5 failures!
 
 File 'dominion.c'
 Lines executed:18.62% of 580
+Creating 'dominion.c.gcov'
+
+cardtest3.c:
+----------------- cardtest3 Testing: outpost ----------------
+TEST 1: OUTPOST CARD AT HANDPOS 0
+G.handCount[0]: 4, expected: 4
+G.hand[0][0]: 11, expected: 11
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 9, expected: 9
+G.hand[0][3]: 10, expected: 10
+G.outpostPlayed: 1, expected: 1
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+TEST 2: OUTPOST CARD AT HANDPOS 1
+G.handCount[0]: 4, expected: 4
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 11, expected: 11
+G.hand[0][2]: 9, expected: 9
+G.hand[0][3]: 10, expected: 10
+G.outpostPlayed: 1, expected: 1
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+TEST 3: OUTPOST CARD AT HANDPOS 2
+G.handCount[0]: 4, expected: 4
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 11, expected: 11
+G.hand[0][3]: 10, expected: 10
+G.outpostPlayed: 1, expected: 1
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+TEST 4: OUTPOST CARD AT HANDPOS 3
+G.handCount[0]: 4, expected: 4
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 9, expected: 9
+G.hand[0][3]: 11, expected: 11
+G.outpostPlayed: 1, expected: 1
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+TEST 5: OUTPOST CARD AT HANDPOS 4
+G.handCount[0]: 4, expected: 4
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 9, expected: 9
+G.hand[0][3]: 10, expected: 10
+G.outpostPlayed: 1, expected: 1
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+
+UNIT TEST cardtest3 COMPLETED: 5 failures!
+
+File 'dominion.c'
+Lines executed:19.31% of 580
+Creating 'dominion.c.gcov'
+
+cardtest4.c:
+----------------- cardtest4 Testing: salvager ----------------
+TEST 1: SALVAGER CARD AT HANDPOS 0, TRASHING HANDPOS 0
+G.numBuys: 2, expected: 2
+G.coins: 0, expected: 4	<------------------- TEST FAILED
+G.handCount[0]: 4, expected: 4
+G.hand[0][0]: 11, expected: 11
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 9, expected: 9
+G.hand[0][3]: 10, expected: 10
+G.discardCount[0]: 0, expected: 0
+TEST 1: SALVAGER CARD AT HANDPOS 0, TRASHING HANDPOS 1
+G.numBuys: 2, expected: 2
+G.coins: 5, expected: 5
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 10, expected: 10
+G.hand[0][1]: 11, expected: 11
+G.hand[0][2]: 9, expected: 9
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 1: SALVAGER CARD AT HANDPOS 0, TRASHING HANDPOS 2
+G.numBuys: 2, expected: 2
+G.coins: 4, expected: 4
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 10, expected: 10
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 11, expected: 11
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 1: SALVAGER CARD AT HANDPOS 0, TRASHING HANDPOS 3
+G.numBuys: 2, expected: 2
+G.coins: 4, expected: 4
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 11, expected: 11
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 9, expected: 9
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 1: SALVAGER CARD AT HANDPOS 0, TRASHING HANDPOS 4
+G.numBuys: 2, expected: 2
+G.coins: 5, expected: 5
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 10, expected: 10
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 9, expected: 9
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 2: SALVAGER CARD AT HANDPOS 1, TRASHING HANDPOS 0
+G.numBuys: 2, expected: 2
+G.coins: 0, expected: 6	<------------------- TEST FAILED
+G.handCount[0]: 4, expected: 3	<------------------- TEST FAILED
+G.hand[0][0]: 7, expected: 11	<------------------- TEST FAILED
+G.hand[0][1]: 11, expected: 10	<------------------- TEST FAILED
+G.hand[0][2]: 9, expected: 9
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 2: SALVAGER CARD AT HANDPOS 1, TRASHING HANDPOS 1
+G.numBuys: 2, expected: 2
+G.coins: 4, expected: 4
+G.handCount[0]: 3, expected: 4	<------------------- TEST FAILED
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 10, expected: 11	<------------------- TEST FAILED
+G.hand[0][2]: 9, expected: 9
+G.hand[0][3]: -1, expected: 10	<------------------- TEST FAILED
+G.discardCount[0]: 0, expected: 0
+TEST 2: SALVAGER CARD AT HANDPOS 1, TRASHING HANDPOS 2
+G.numBuys: 2, expected: 2
+G.coins: 4, expected: 4
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 10, expected: 10
+G.hand[0][2]: 11, expected: 11
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 2: SALVAGER CARD AT HANDPOS 1, TRASHING HANDPOS 3
+G.numBuys: 2, expected: 2
+G.coins: 4, expected: 4
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 11, expected: 11
+G.hand[0][2]: 9, expected: 9
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 2: SALVAGER CARD AT HANDPOS 1, TRASHING HANDPOS 4
+G.numBuys: 2, expected: 2
+G.coins: 5, expected: 5
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 10, expected: 10
+G.hand[0][2]: 9, expected: 9
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 3: SALVAGER CARD AT HANDPOS 2, TRASHING HANDPOS 0
+G.numBuys: 2, expected: 2
+G.coins: 0, expected: 6	<------------------- TEST FAILED
+G.handCount[0]: 4, expected: 3	<------------------- TEST FAILED
+G.hand[0][0]: 7, expected: 11	<------------------- TEST FAILED
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 11, expected: 10	<------------------- TEST FAILED
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 3: SALVAGER CARD AT HANDPOS 2, TRASHING HANDPOS 1
+G.numBuys: 2, expected: 2
+G.coins: 5, expected: 5
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 11, expected: 11
+G.hand[0][2]: 10, expected: 10
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 3: SALVAGER CARD AT HANDPOS 2, TRASHING HANDPOS 2
+G.numBuys: 2, expected: 2
+G.coins: 4, expected: 4
+G.handCount[0]: 3, expected: 4	<------------------- TEST FAILED
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 10, expected: 11	<------------------- TEST FAILED
+G.hand[0][3]: -1, expected: 10	<------------------- TEST FAILED
+G.discardCount[0]: 0, expected: 0
+TEST 3: SALVAGER CARD AT HANDPOS 2, TRASHING HANDPOS 3
+G.numBuys: 2, expected: 2
+G.coins: 4, expected: 4
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 11, expected: 11
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 3: SALVAGER CARD AT HANDPOS 2, TRASHING HANDPOS 4
+G.numBuys: 2, expected: 2
+G.coins: 5, expected: 5
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 10, expected: 10
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 4: SALVAGER CARD AT HANDPOS 3, TRASHING HANDPOS 0
+G.numBuys: 2, expected: 2
+G.coins: 0, expected: 6	<------------------- TEST FAILED
+G.handCount[0]: 4, expected: 3	<------------------- TEST FAILED
+G.hand[0][0]: 7, expected: 11	<------------------- TEST FAILED
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 9, expected: 9
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 4: SALVAGER CARD AT HANDPOS 3, TRASHING HANDPOS 1
+G.numBuys: 2, expected: 2
+G.coins: 5, expected: 5
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 11, expected: 11
+G.hand[0][2]: 9, expected: 9
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 4: SALVAGER CARD AT HANDPOS 3, TRASHING HANDPOS 2
+G.numBuys: 2, expected: 2
+G.coins: 4, expected: 4
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 11, expected: 11
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 4: SALVAGER CARD AT HANDPOS 3, TRASHING HANDPOS 3
+G.numBuys: 2, expected: 2
+G.coins: 4, expected: 4
+G.handCount[0]: 3, expected: 4	<------------------- TEST FAILED
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 9, expected: 9
+G.hand[0][3]: -1, expected: 11	<------------------- TEST FAILED
+G.discardCount[0]: 0, expected: 0
+TEST 4: SALVAGER CARD AT HANDPOS 3, TRASHING HANDPOS 4
+G.numBuys: 2, expected: 2
+G.coins: 5, expected: 5
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 9, expected: 9
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 5: SALVAGER CARD AT HANDPOS 4, TRASHING HANDPOS 0
+G.numBuys: 2, expected: 2
+G.coins: 0, expected: 6	<------------------- TEST FAILED
+G.handCount[0]: 4, expected: 3	<------------------- TEST FAILED
+G.hand[0][0]: 7, expected: 24	<------------------- TEST FAILED
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 9, expected: 9
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 5: SALVAGER CARD AT HANDPOS 4, TRASHING HANDPOS 1
+G.numBuys: 2, expected: 2
+G.coins: 5, expected: 5
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 24, expected: 24
+G.hand[0][2]: 9, expected: 9
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 5: SALVAGER CARD AT HANDPOS 4, TRASHING HANDPOS 2
+G.numBuys: 2, expected: 2
+G.coins: 4, expected: 4
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 24, expected: 24
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 5: SALVAGER CARD AT HANDPOS 4, TRASHING HANDPOS 3
+G.numBuys: 2, expected: 2
+G.coins: 4, expected: 4
+G.handCount[0]: 3, expected: 3
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 9, expected: 9
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+G.discard[0][0]: 387389207, expected: 24	<------------------- TEST FAILED
+TEST 5: SALVAGER CARD AT HANDPOS 4, TRASHING HANDPOS 4
+G.numBuys: 2, expected: 2
+G.coins: 4, expected: 4
+G.handCount[0]: 3, expected: 4	<------------------- TEST FAILED
+G.hand[0][0]: 7, expected: 7
+G.hand[0][1]: 8, expected: 8
+G.hand[0][2]: 9, expected: 9
+G.hand[0][3]: -1, expected: 10	<------------------- TEST FAILED
+G.discardCount[0]: 0, expected: 0
+
+UNIT TEST cardtest4 COMPLETED: 65 failures!
+
+File 'dominion.c'
+Lines executed:21.72% of 580
 Creating 'dominion.c.gcov'
 
