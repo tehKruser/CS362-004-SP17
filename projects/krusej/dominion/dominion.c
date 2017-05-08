@@ -1108,7 +1108,7 @@ int adventurerCard(struct gameState *state)
         //
         /** Bug: replaced 'cardDrawn == copper' with '(cardDrawn = copper)' **/
         //if (cardDrawn = copper || cardDrawn == silver || cardDrawn == gold)
-        if (cardDrawn = copper || cardDrawn == silver || cardDrawn == gold)
+        if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
           drawntreasure++;
         else{
           temphand[z]=cardDrawn;
