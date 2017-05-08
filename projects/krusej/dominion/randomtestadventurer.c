@@ -8,7 +8,7 @@
  * Include the following lines in your makefile:
  *
  * randomtestadventurer: randomtestadventurer.c dominion.o rngs.o
- *      gcc -o randomtestadventurer1 -g  randomtestadventurer.c dominion.o rngs.o $(CFLAGS)
+ *      gcc -o randomtestadventurer -g  randomtestadventurer.c dominion.o rngs.o $(CFLAGS)
  */
 
 
@@ -34,9 +34,8 @@ int assertMemEqual(int *m1, int *m2, int size);
 
 
 int main(){
-    //int seed = 1000;
+
     int i, j, n, c, p, treasureCount, worstCaseHand, cardsOK;
-    //int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
     int cards[13] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall, copper, silver, gold};
 
     struct gameState G;
@@ -65,7 +64,7 @@ int main(){
             G.deckCount[p] = floor(Random() * MAX_DECK);
 
             for(j = G.deckCount[p] - 1; j >= 0; j--){
-                c = floor(Random() * 12.49);
+                c = floor(Random() * 12.99);
                 G.deck[p][j] = cards[c];
                 if (cards[c] == copper || cards[c] == silver || cards[c] == gold){
                     treasureCount++;

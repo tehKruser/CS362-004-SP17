@@ -33,12 +33,20 @@ unittest1: unittest1.c dominion.o rngs.o
 	gcc -o unittest1 -g  unittest1.c dominion.o rngs.o $(CFLAGS)
 	
 randomtestadventurer.out: randomtestadventurer.c dominion.c rngs.c
-	echo "Result for running random tests on Adventurer:" >  randomtestadventurer.out
+	echo "Result for running random tests on adventurerCard:" >  randomtestadventurer.out
 	
 	gcc -o randomtestadventurer dominion.c rngs.c randomtestadventurer.c $(CFLAGS)
 	randomtestadventurer >>  randomtestadventurer.out
 	gcov -b -f dominion.c >>  randomtestadventurer.out
 	cat dominion.c.gcov >> randomtestadventurer.out
+
+randomtestcard1.out: randomtestcard1.c dominion.c rngs.c
+	echo "Result for running random tests on outpostCard:" >  randomtestcard1.out
+	
+	gcc -o randomtestcard1 dominion.c rngs.c randomtestcard1.c $(CFLAGS)
+	randomtestcard1 >>  randomtestcard1.out
+	gcov -b -f dominion.c >>  randomtestcard1.out
+	cat dominion.c.gcov >> randomtestcard1.out
 	
 unittestresults.out: unittest1.c unittest2.c unittest3.c unittest4.c cardtest1.c cardtest2.c cardtest3.c cardtest4.c dominion.c rngs.c
 	echo "Result for running unit tests:" >  unittestresults.out

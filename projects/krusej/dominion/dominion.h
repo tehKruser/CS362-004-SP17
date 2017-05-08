@@ -135,6 +135,8 @@ int smithyCard(struct gameState *state, int handPos);
 int mineCard(struct gameState *state, int choice1, int choice2, int handPos);
 int council_roomCard(struct gameState *state, int handPos);
 int feastCard(struct gameState *state, int choice1, int handPos);
+int outpostCard(struct gameState *state, int handPos, int currentPlayer);
+int salvagerCard(struct gameState *state, int choice1, int currentPlayer, int handPos);
 
 
 int playAdventurer(struct gameState *state);

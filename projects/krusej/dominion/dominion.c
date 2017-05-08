@@ -1022,28 +1022,10 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 
     case outpost:
-      //set outpost flag
-      state->outpostPlayed++;
-
-      //discard card
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
+        return outpostCard(state, handPos, currentPlayer);
 
     case salvager:
-      //+1 buy
-      state->numBuys++;
-
-      if (choice1)
-	{
-	  //gain coins equal to trashed card
-	  state->coins = state->coins + getCost( handCard(choice1, state) );
-	  //trash card
-	  discardCard(choice1, currentPlayer, state, 1);
-	}
-
-      //discard card
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
+        return salvagerCard(state, choice1, currentPlayer, handPos);
 
     case sea_hag:
       for (i = 0; i < state->numPlayers; i++){
@@ -1087,6 +1069,31 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     }
 
   return -1;
+}
+
+int outpostCard(struct gameState *state, int handPos, int currentPlayer){
+    //set outpost flag
+    state->outpostPlayed++;
+
+    //discard card
+    discardCard(handPos, currentPlayer, state, 0);
+    return 0;
+}
+
+int salvagerCard(struct gameState *state, int choice1, int currentPlayer, int handPos){
+    //+1 buy
+    state->numBuys++;
+
+    if (choice1) {
+        //gain coins equal to trashed card
+        state->coins = state->coins + getCost( handCard(choice1, state) );
+        //trash card
+        discardCard(choice1, currentPlayer, state, 1);
+    }
+
+    //discard card
+    discardCard(handPos, currentPlayer, state, 0);
+    return 0;
 }
 
 
