@@ -19,6 +19,7 @@
 #include <assert.h>
 #include "rngs.h"
 #include <stdlib.h>
+#include <math.h>
 
 #define UNITTEST "randomtestadventurer"
 #define FUNCTEST "adventurerCard()"
@@ -26,11 +27,16 @@
 // set NOISY_TEST to 0 to remove printfs from output
 #define NOISY_TEST 1
 
-int main(){
+// prototype functions
+int checkAdventurerCard(int p, struct gameState *post);
+int assertEqual(int v1, int v2);
+int assertMemEqual(int *m1, int *m2, int size);
 
-    int seed = 1000;
-    int i, j, n, c, treasureCount, worstCaseHand, cardsOK, testAll;
-    int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
+
+int main(){
+    //int seed = 1000;
+    int i, j, n, c, p, treasureCount, worstCaseHand, cardsOK;
+    //int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
     int cards[13] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall, copper, silver, gold};
 
     struct gameState G;
@@ -44,11 +50,11 @@ int main(){
 
     for(n = 0; n < 2000; n++){
         for(i = 0; i < sizeof(struct gameState); i++){
-            ((char*)&G[i] = floor(Random() * 256));
+            ((char*)&G)[i] = floor(Random() * 256);
         }
         p = floor(Random() * 4);
         G.whoseTurn = p;
-        int cardsOK = 0;
+        cardsOK = 0;
 
         // set up a sane game state where:
         // there is at least 2 treasure cards between the deck and discard pile
@@ -63,6 +69,7 @@ int main(){
                 G.deck[p][j] = cards[c];
                 if (cards[c] == copper || cards[c] == silver || cards[c] == gold){
                     treasureCount++;
+                }
             }
 
             G.discardCount[p] = floor(Random() * MAX_DECK);
@@ -71,7 +78,9 @@ int main(){
                 G.discard[p][j] = cards[c];
                 if (cards[c] == copper || cards[c] == silver || cards[c] == gold){
                     treasureCount++;
+                }
             }
+
             worstCaseHand = G.deckCount[p] + G.discardCount[p] - treasureCount + 2;
 
             if(treasureCount >= 2 && worstCaseHand <= 500){
@@ -79,13 +88,13 @@ int main(){
             }
         }
 
-        // need handCount to be able to hold all the cards in a worst case scenario
-        G.handCount[p] = floor(Random() * (MAX_HAND - worstCaseHand));
-        G.coins = floor(Random() * 100);
 
-        testFailures += checkAdventurerCard(p, &G);
-    }
+            // need handCount to be able to hold all the cards in a worst case scenario
+            G.handCount[p] = floor(Random() * (MAX_HAND - worstCaseHand));
+            G.coins = floor(Random() * 100);
 
+            testFailures += checkAdventurerCard(p, &G);
+        }
     return 0;
 }
 
@@ -99,7 +108,7 @@ int assertEqual(int v1, int v2){
     }
 }
 
-int asserMemEqual(int *m1, int *m2, int size){
+int assertMemEqual(int *m1, int *m2, int size){
     if(memcmp(m1, m2, size) == 0){
         return 0;
     } else {
@@ -112,12 +121,12 @@ int checkAdventurerCard(int p, struct gameState *post){
     struct gameState pre;
     memcpy(&pre, post, sizeof(struct gameState));
 
-    int i, r;
+    int i, testAll;
 
-    r = adventurerCard(post);
+    adventurerCard(post);
 
     int treasureCount = 0;
-    int card1, card2, failures, failFlag;
+    int card1, card2, failures;
     int addDiscard = 0;
 
     // check if 2 treasure cards are in deck
@@ -135,23 +144,21 @@ int checkAdventurerCard(int p, struct gameState *post){
         }
     }
 
-
-
     if(treasureCount >= 2){ // deck has enough treasure cards
 
         // can test for cards in deck and discard
         testAll = 1;
 
         // expected hand
-        pre.hand[p][pre.handCount] = card1;
+        pre.hand[p][pre.handCount[p]] = card1;
         pre.handCount[p]++;
-        pre.hand[p][pre.handCount] = card2;
+        pre.hand[p][pre.handCount[p]] = card2;
         pre.handCount[p]++;
 
         // expected discard and deck
         // copy from back of deck and add to back of discard
         for (i = 0; i < addDiscard; i++){
-            pre.discard[p][pre.discardCount[p]] = pre.deck[p][pre.deckCount[p] -1]
+            pre.discard[p][pre.discardCount[p]] = pre.deck[p][pre.deckCount[p] -1];
             pre.discardCount[p]++;
             pre.deckCount[p]--;
         }
@@ -168,15 +175,15 @@ int checkAdventurerCard(int p, struct gameState *post){
     //--------------------------------------------------------
     // Number of cards in hand
 #if (NOISY_TEST == 1)
-    printf("\npost.handCount[%d]: %d, expected: %d", p, post->handCount[p], pre->handCount[p]);
+    printf("\npost.handCount[%d]: %d, expected: %d", p, post->handCount[p], pre.handCount[p]);
 #endif
     failures += assertEqual(post->handCount[p], pre.handCount[p]);
 
     if(testAll){
 #if (NOISY_TEST == 1)
-        printf("\nComparing memory of post->hand[%d] to expected");
+        printf("\nComparing memory of post->hand[%d] to expected", p);
 #endif
-         failures += assertMemEqual(post->hand[p], &pre.hand[p], sizeof(int) * pre.handCount[p]);
+         failures += assertMemEqual(post->hand[p], (int*)&pre.hand[p], sizeof(int) * pre.handCount[p]);
     }
 
     return failures;
