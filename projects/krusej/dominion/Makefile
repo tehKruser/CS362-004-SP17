@@ -47,6 +47,14 @@ randomtestcard1.out: randomtestcard1.c dominion.c rngs.c
 	randomtestcard1 >>  randomtestcard1.out
 	gcov -b -f dominion.c >>  randomtestcard1.out
 	cat dominion.c.gcov >> randomtestcard1.out
+
+randomtestcard2.out: randomtestcard2.c dominion.c rngs.c
+	echo "Result for running random tests on smithyCard:" >  randomtestcard2.out
+	
+	gcc -o randomtestcard2 dominion.c rngs.c randomtestcard2.c $(CFLAGS)
+	randomtestcard2 >>  randomtestcard2.out
+	gcov -b -f dominion.c >>  randomtestcard2.out
+	cat dominion.c.gcov >> randomtestcard2.out
 	
 unittestresults.out: unittest1.c unittest2.c unittest3.c unittest4.c cardtest1.c cardtest2.c cardtest3.c cardtest4.c dominion.c rngs.c
 	echo "Result for running unit tests:" >  unittestresults.out
