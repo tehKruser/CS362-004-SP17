@@ -65,7 +65,7 @@ int main(){
             G.deckCount[p] = floor(Random() * MAX_DECK);
 
             for(j = G.deckCount[p] - 1; j >= 0; j--){
-                c = floor(Random() * 12);
+                c = floor(Random() * 12.49);
                 G.deck[p][j] = cards[c];
                 if (cards[c] == copper || cards[c] == silver || cards[c] == gold){
                     treasureCount++;
@@ -74,7 +74,7 @@ int main(){
 
             G.discardCount[p] = floor(Random() * MAX_DECK);
             for(j = G.discardCount[p] - 1; j >= 0; j--){
-                c = floor(Random() * 12);
+                c = floor(Random() * 12.49);
                 G.discard[p][j] = cards[c];
                 if (cards[c] == copper || cards[c] == silver || cards[c] == gold){
                     treasureCount++;
@@ -88,13 +88,21 @@ int main(){
             }
         }
 
+        // need handCount to be able to hold all the cards in a worst case scenario
+        G.handCount[p] = floor(Random() * (MAX_HAND - worstCaseHand));
+        G.coins = floor(Random() * 100);
 
-            // need handCount to be able to hold all the cards in a worst case scenario
-            G.handCount[p] = floor(Random() * (MAX_HAND - worstCaseHand));
-            G.coins = floor(Random() * 100);
+        testFailures += checkAdventurerCard(p, &G);
+    }
 
-            testFailures += checkAdventurerCard(p, &G);
-        }
+    printf("\n\nUNIT TEST %s COMPLETED: ", UNITTEST);
+
+    if(testFailures == 0){
+        printf("All tests passed!\n\n");
+    } else {
+        printf("%d failures!\n\n", testFailures);
+    }
+
     return 0;
 }
 
@@ -121,7 +129,7 @@ int checkAdventurerCard(int p, struct gameState *post){
     struct gameState pre;
     memcpy(&pre, post, sizeof(struct gameState));
 
-    int i, testAll;
+    int i, j, testAll;
 
     adventurerCard(post);
 
@@ -156,11 +164,16 @@ int checkAdventurerCard(int p, struct gameState *post){
         pre.handCount[p]++;
 
         // expected discard and deck
-        // copy from back of deck and add to back of discard
-        for (i = 0; i < addDiscard; i++){
-            pre.discard[p][pre.discardCount[p]] = pre.deck[p][pre.deckCount[p] -1];
-            pre.discardCount[p]++;
+        j = pre.deckCount[p] - addDiscard - 2;
+        for (i = 0; i < addDiscard + 2; i++){
+            if(pre.deck[p][j] == copper || pre.deck[p][j] == silver || pre.deck[p][j] == gold){
+                // do nothing
+            } else {
+                pre.discard[p][pre.discardCount[p]] = pre.deck[p][j];
+                pre.discardCount[p]++;
+            }
             pre.deckCount[p]--;
+            j++;
         }
     } else {
         // discard has been shuffled, can only test increase in handCount.
@@ -179,11 +192,38 @@ int checkAdventurerCard(int p, struct gameState *post){
 #endif
     failures += assertEqual(post->handCount[p], pre.handCount[p]);
 
+
     if(testAll){
+
 #if (NOISY_TEST == 1)
         printf("\nComparing memory of post->hand[%d] to expected", p);
 #endif
-         failures += assertMemEqual(post->hand[p], (int*)&pre.hand[p], sizeof(int) * pre.handCount[p]);
+        failures += assertMemEqual(post->hand[p], (int*)&pre.hand[p], sizeof(int) * pre.handCount[p]);
+
+        //--------------------------------------------------------
+        // Number of cards in deck
+#if (NOISY_TEST == 1)
+        printf("\npost.deckCount[%d]: %d, expected: %d", p, post->deckCount[p], pre.deckCount[p]);
+#endif
+        failures += assertEqual(post->deckCount[p], pre.deckCount[p]);
+
+#if (NOISY_TEST == 1)
+        printf("\nComparing memory of post->deck[%d] to expected", p);
+#endif
+        failures += assertMemEqual(post->deck[p], (int*)&pre.deck[p], sizeof(int) * pre.deckCount[p]);
+
+        //--------------------------------------------------------
+        // Number of cards in discard
+#if (NOISY_TEST == 1)
+        printf("\npost.discardCount[%d]: %d, expected: %d", p, post->discardCount[p], pre.discardCount[p]);
+#endif
+        failures += assertEqual(post->discardCount[p], pre.discardCount[p]);
+
+#if (NOISY_TEST == 1)
+        printf("\nComparing memory of post->discard[%d] to expected", p);
+#endif
+        failures += assertMemEqual(post->discard[p], (int*)&pre.discard[p], sizeof(int) * pre.discardCount[p]);
+
     }
 
     return failures;
