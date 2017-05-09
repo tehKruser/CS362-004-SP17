@@ -89,7 +89,6 @@ int main(){
 
         // need handCount to be able to hold all the cards in a worst case scenario
         G.handCount[p] = floor(Random() * (MAX_HAND - worstCaseHand));
-        G.coins = floor(Random() * 100);
 
         testFailures += checkAdventurerCard(p, &G);
     }
