@@ -1,43 +1,5 @@
 ==============================================================================================
 
-Title:    Template
-
-Class:
-e.g. "Feature Request", "System Error", "Serious Bug"
-
-Class:	Serious Bug
-
-Date:   		05/21/2017        
-Reported By:   	Justin Kruse
-Email:      	krusej@onid.oregonstate.edu
-
-Product:	dominion.c		Version:	https://github.com/harrider/CS362-004-SP17/tree/master/projects/harrider
-Platform:	CentOS Linux	Version:	7.2.1511
-
-Is it reproducible: Yes
-
-Description
-===========
-
-
-
-Steps to Produce/Reproduce
---------------------------
-
-
-
-Expected Results / Actual Results
-----------------------------------
-
-
-
-Attachments
------------
-
-
-
-==============================================================================================
-
 Title:	Incorrect card counts when calling AdventurerFunc
 
 Class:	Serious Bug

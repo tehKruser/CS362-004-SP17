@@ -1341,6 +1341,9 @@ int discardCard(int handPos, int currentPlayer, struct gameState *state, int tra
       state->playedCardCount++;
     }
 
+  // place card in discard pile
+  state->discard[currentPlayer][state->discardCount[currentPlayer]++] = state->hand[currentPlayer][handPos];
+
   //set played card to -1
   state->hand[currentPlayer][handPos] = -1;
 
