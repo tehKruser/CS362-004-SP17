@@ -81,7 +81,7 @@ unittestresults.out: unittest1.c unittest2.c unittest3.c unittest4.c cardtest1.c
 	cat dominion.c.gcov >> test3.out
 	
 	echo "unittest4.c:" >>  unittestresults.out
-	gcc -o unittest4 dominion.c rngs.c unittest4.c $(CFLAGS)
+	gcc -o unittest4 -g dominion.c rngs.c unittest4.c $(CFLAGS)
 	unittest4 >>  unittestresults.out
 	gcov -b -f dominion.c >>  unittestresults.out
 	cat dominion.c.gcov >> unittestresults.out
