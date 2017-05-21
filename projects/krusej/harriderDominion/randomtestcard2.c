@@ -1,10 +1,9 @@
-/****************************
-* Author: Derek Harris
-* Course: CS362
-* Assignment: Assignment 4
-* File: randomtestcard2.c
-*****************************/
- 
+/*
+ * randomtestcard2.c
+ *
+
+ */
+
 /*
  * Include the following lines in your makefile:
  *
@@ -12,237 +11,192 @@
  *      gcc -o randomtestcard2 -g  randomtestcard2.c dominion.o rngs.o $(CFLAGS)
  */
 
+
 #include "dominion.h"
 #include "dominion_helpers.h"
-#include "rngs.h"
-#include "interface.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
 #include <string.h>
+#include <stdio.h>
+#include <assert.h>
+#include "rngs.h"
+#include <stdlib.h>
+#include <math.h>
 
-#define TESTCARD "great_hall"
-#define NUM_TESTS 10000
+#define UNITTEST "randomtestcard2"
+#define FUNCTEST "smithyCard()"
 
-//Function prototypes
-void myAssert(int, int, int*);
-void myAssertLessThan(int, int, int*);
+// set NOISY_TEST to 0 to remove printfs from output
+#define NOISY_TEST 1
 
-/****************
-* Main function
-****************/
-int main() 
-{
-  int x = 0;						//variable to store for loop counter
-  int j = 0;						//variable to store # treasure cards in test gamestate hand
-  int m = 0;						//variable to store # treasure cards in actual gamestate hand
-  int newActions = 0;					//variable to store # of new actions
-  int passCount = 0;					//variable to store # of tests passed this iteration
-  int numPass = 0;					//variable to store total # of tests passed
-  int numFail = 0;					//variable to store total # of tests failed
-  int totTests = 0;					//variable to store total # of tests run
-  int numTests = 4;					//variable to store # of tests
-  int newCards = 0;					//variable to store # of new cards
-  int discarded = 0;					//variable to store # of discarded cards
-  int shuffledCards = 0;				//variable to store # of cards shuffled into deck
-  int handpos = 0;					//variable to store hand position
-  int choice1=0, choice2=0, choice3=0, bonus=0;		//variables to initialize choice and bonus
-  int seed = 1000;					//seed for initialize game function
-  int status = -1;					//variable to store result of initializing game
-  int numPlayers = 0;					//variable to store # of players
-  int thisPlayer = 0;					//variable to identify current player
-  int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
-			sea_hag, tribute, smithy, council_room};
-
-  struct gameState testG;				//struct to store test gamestate values
-  struct gameState* randG;				//gameState struct ptr to help create new gameStates
+// prototype functions
+int checkCard(int p, struct gameState *post, int handPos);
+int assertEqual(int v1, int v2);
+int assertMemEqual(int *m1, int *m2, int size);
 
 
-  for(x = 0; x < NUM_TESTS; x++)			//iterate for test case number of games
-  {
-	  seed = rand();				//random seed to initialize gamestate
-	  numPlayers = (rand() % MAX_PLAYERS);		//randomize number of players... chooses between 2-4 players
-	  randG = malloc(sizeof(struct gameState));	//create new gameState struct
-  
+int main(){
+    int i, n, p, handPos, totalCards, cardsOK;
 
-	  // initialize a game state and player cards
-	  status = initializeGame(numPlayers, k, seed, randG);
+    struct gameState G;
 
-	  // initialize player hand, deck and discard pile to random numbers
-	  for(int a = 0; a < numPlayers; a++)
-	  {
-		  randG->deckCount[a] = rand() % MAX_DECK;
-		  randG->discardCount[a] = rand() % MAX_DECK;
-		  randG->handCount[a] = rand() % MAX_HAND;
-	  }
+    printf("Testing %s.\n RANDOM TESTS.\n", FUNCTEST);
 
-	  printf("|***********************************************************************|\n");
-	  printf("|***********************************************************************|\n\n");
+    SelectStream(2);
+    PutSeed(3);
 
-	  printf("----------------- Test # %d for Card: %s ----------------\n", x+1, TESTCARD);
+    int testFailures = 0;
 
-  	  // ----------- TEST 1: +1 cards & +1 actions --------------
-  	  printf("TEST 1: +1 new cards and +1 actions\n");
-	  printf("\n");
+    for(n = 0; n < 2000; n++){
+        for(i = 0; i < sizeof(struct gameState); i++){
+            ((char*)&G)[i] = floor(Random() * 256);
+        }
+        p = floor(Random() * 4);
+        G.whoseTurn = p;
+        G.outpostPlayed = 0;
+        G.playedCardCount = 0;
 
+        G.handCount[p] = floor(Random() * (MAX_HAND - 4)) + 1; // game state requires smithy in hand
+        handPos = floor(Random() * (G.handCount[p] - 1));
 
-	  //test game initiliazation status...failed test should return -1, otherwise should return 0
-	  if(status < 0)
-	  {
-		printf("ERROR: Players < 2. Actual number of players: %d\n", numPlayers);
+        G.hand[p][handPos] = smithy;   // set smithy position in hand
 
-		printf("status of gameState initialization = %d, expected = %d : ", status, -1);
-		myAssert(status, -1, &passCount);	//assert test conditions here
+        cardsOK = 0;
+        while(!cardsOK) {
+            G.discardCount[p] = floor(Random() * (MAX_DECK - 1)); // will discard, so can't have full deck
+            G.deckCount[p] = floor(Random() * (MAX_DECK - 1)); // will discard, so can't have full deck
+            totalCards = G.discardCount[p] + G.deckCount[p];
+            if(totalCards >= 3){
+                cardsOK = 1;
+            }
+        }
 
-		printf("\n >>>>> SUCCESS: Test # %d for card [%s] complete.\nPassed [%d of %d] tests <<<<<\n\n", x+1, TESTCARD, passCount, 1);
-		printf("Continuing to next test iteration \n\n");
-
-		numPass = numPass + passCount;		//record number of tests passed
-		numFail = numFail + (1 - passCount);	//record number of tests failed
-		totTests = totTests + 1;		//record total number of tests
-
-		passCount = 0;
-		numTests = 4;
-		free(randG);				//free dynamically allocated memory
-		continue;
-	  }
-	  else
-	  {
-	  	printf("status of gameState initialization = %d, expected = %d : ", status, 0);
-	  	myAssert(status, 0, &passCount);
-	  }
-
-	  // copy the game state to a test case
-	  memcpy(&testG, randG, sizeof(struct gameState));
-
-	  printf("\ntestG.handCount[thisPlayer] = %d, randG->handCount[thisPlayer] = %d\n\n", testG.handCount[thisPlayer], randG->handCount[thisPlayer]);
-
-	  cardEffect(great_hall, choice1, choice2, choice3, &testG, handpos, &bonus);			//call the card's function
-
-	  newCards = 1;											//declare # of new cards
-	  discarded = 1;										//declare # of cards to discard
-	  newActions = 1;
-
-	  printf("hand count = %d, expected = %d : ", testG.handCount[thisPlayer], randG->handCount[thisPlayer] + newCards - discarded); 
-	  myAssert(testG.handCount[thisPlayer], randG->handCount[thisPlayer] + newCards - discarded, &passCount);
-
-	  printf("deck count = %d, expected = %d : ", testG.deckCount[thisPlayer], randG->deckCount[thisPlayer] - newCards + shuffledCards);
-	  myAssertLessThan(testG.deckCount[thisPlayer], randG->deckCount[thisPlayer] - newCards + shuffledCards, &passCount);
-
-	  printf("actions count = %d, expected = %d : ", testG.numActions, randG->numActions + newActions);
-	  myAssert(testG.numActions, randG->numActions + newActions, &passCount);
-
-	  printf("---------------------------------------------------\n");
-
-	  //------------- Check other player states ------------------
-	  printf("\nChecking other player states...\n\n");
-
-	  for(int i = 1; i < numPlayers; i++)
-	  {
-	    printf("player[%d] hand count = %d, expected = %d : ", i, testG.handCount[i], randG->handCount[i]);
-	    myAssert(testG.handCount[i], randG->handCount[i], &passCount);
-
-	    printf("player[%d] deck count = %d, expected = %d : ", i, testG.deckCount[i], randG->deckCount[i]);
-	    myAssert(testG.deckCount[i], randG->deckCount[i], &passCount);
-	  
-	    numTests = numTests + 2;
-	  }
-
-	  //------------- Check kingdom and victory card ------------------
-	  printf("\nTesting Kingdom Card and Victory Card states...\n\n");
-
-	  for(int j = 0; j < 10; j++)
-	  {
-	    printf("kingdom card k[%d] supply count = %d, expected = %d : ", j, testG.supplyCount[k[j]], randG->supplyCount[k[j]]);
-	    myAssert(testG.supplyCount[k[j]], randG->supplyCount[k[j]], &passCount);
-
-	    numTests = numTests + 1;
-	  }
-
-	  printf("\n");
-
-	  printf("victory card [estate] supply count = %d, expected = %d : ", testG.supplyCount[estate], randG->supplyCount[estate]);
-	  myAssert(testG.supplyCount[estate], randG->supplyCount[estate], &passCount);
-
-	  numTests = numTests + 1;
-
-	  printf("victory card [duchy] supply count = %d, expected = %d : ", testG.supplyCount[duchy], randG->supplyCount[duchy]);
-	  myAssert(testG.supplyCount[duchy], randG->supplyCount[duchy], &passCount);
-
-	  numTests = numTests + 1;
-
-	  printf("victory card [province] supply count = %d, expected = %d : ", testG.supplyCount[province], randG->supplyCount[province]);
-	  myAssert(testG.supplyCount[province], randG->supplyCount[province], &passCount);
-
-	  numTests = numTests + 1;
+        testFailures += checkCard(p, &G, handPos);
+    }
 
 
-	  printf("---------------------------------------------------\n");
 
-	  //----------------------- print results -------------------------------
-	  printf("\n >>>>> SUCCESS: Test # %d for card [%s] complete.\nPassed [%d of %d] tests <<<<<\n\n", x+1, TESTCARD, passCount, numTests);
+    printf("\n\nUNIT TEST %s COMPLETED: ", UNITTEST);
 
-	  numPass = numPass + passCount;		//record number of tests passed for this game
-	  numFail = numFail + (numTests - passCount);	//record number of tests failed for this game
-	  totTests = totTests + numTests;		//record number of tests run
-	
-	  passCount = 0;				//reset passCount
-	  numTests = 4;					//reset numTests
+    if(testFailures == 0){
+        printf("All tests passed!\n\n");
+    } else {
+        printf("%d failures!\n\n", testFailures);
+    }
 
-	  free(randG);					//free dynamically allocated memory
-	  memset(&testG, 0, sizeof(struct gameState));	//clear testG struct
-
-  }//end outer for loop
-
-
-  printf("\n---------------------------------------------\n");
-  printf("Final results of random testing:\n");
-  printf("--------------------------------\n");
-  printf("Total # of games run: %d\nTotal # of tests run: %d\nTotal # of tests passed: %d\nTotal # of tests failed: %d\n", NUM_TESTS,totTests, numPass, numFail);
-
-  return 0;
+    return 0;
 }
 
-/*************************************************************************************/
-/*************************************************************************************/
-
-
-/**********************************
-* Function: myAssert()
-* Input: int left, int right
-* Output: none
-* Description: compares left value
-*   to right and displays a message
-**********************************/
-void myAssert(int left, int right, int* count)
-{
-  if(left == right)
-  {
-    printf("test passed!\n");
-    *count+=1;
-  }
-  else
-  {
-    printf("test failed!\n");
-  }
+int assertEqual(int v1, int v2){
+    if(v1 == v2){
+        //printf("RESULT: PASS\n");
+        return 0;
+    } else {
+        printf("\t<------------------- TEST FAILED");
+        return 1;
+    }
 }
 
-/**********************************
-* Function: myAssertLessThan()
-* Input: int left, int right
-* Output: none
-* Description: compares left value
-*   to right and displays a message
-**********************************/
-void myAssertLessThan(int left, int right, int* count)
-{
-  if(left <= right)
-  {
-    printf("test passed!\n");
-    *count+=1;
-  }
-  else
-  {
-    printf("test failed!\n");
-  }
+int assertMemEqual(int *m1, int *m2, int size){
+    if(memcmp(m1, m2, size) == 0){
+        return 0;
+    } else {
+        printf("\t<------------------- TEST FAILED");
+        return 1;
+    }
+}
+
+int checkCard(int p, struct gameState *post, int handPos){
+    int i, failures, testAll, fromDiscard;
+
+    struct gameState pre;
+    memcpy(&pre, post, sizeof(struct gameState));
+
+    smithyCard(post, handPos);
+
+    if(pre.deckCount[p] >= 3){
+        testAll = 1;
+        //--------------------------------------------------------
+        // Set expected cards in hand
+        for(i = 0; i < 3; i++){
+            pre.hand[p][pre.handCount[p]] = pre.deck[p][pre.deckCount[p] - 1 ];
+            pre.handCount[p]++;
+            pre.deckCount[p]--;
+        }
+
+        pre.hand[p][handPos] = -1;
+
+        if(handPos == pre.handCount[p] - 1){
+            pre.handCount[p]--;
+        } else {
+            pre.hand[p][handPos] = pre.hand[p][pre.handCount[p] - 1];
+            pre.hand[p][pre.handCount[p] - 1] = -1;
+            pre.handCount[p]--;
+        }
+
+        //--------------------------------------------------------
+        // Set expected cards in discard
+        pre.discard[p][pre.discardCount[p]] = smithy;
+        pre.discardCount[p]++;
+
+    } else {
+        testAll = 0;
+
+        // we can only verify the handCount, deckCount and discardCount b/c a shuffle happened
+        pre.handCount[p] += 2;
+
+        fromDiscard = 3 - pre.deckCount[p];
+        pre.deckCount[p] = pre.discardCount[p] - fromDiscard;
+
+        //--------------------------------------------------------
+        // Set expected cards in discard
+        pre.discardCount[p] = 1;    // should only be 1 card in discard if shuffle happened
+        pre.discard[p][pre.discardCount[p] - 1] = smithy;
+    }
+
+    // tests
+    failures = 0;
+
+
+    //--------------------------------------------------------
+    // Number of cards in hand
+#if (NOISY_TEST == 1)
+    printf("\npost.handCount[%d]: %d, expected: %d", p, post->handCount[p], pre.handCount[p]);
+#endif
+    failures += assertEqual(post->handCount[p], pre.handCount[p]);
+
+    if(testAll){
+#if (NOISY_TEST == 1)
+        printf("\nComparing memory of post->hand[%d] to expected", p);
+#endif
+        failures += assertMemEqual(post->hand[p], (int*)&pre.hand[p], sizeof(int) * pre.handCount[p]);
+    }
+
+    //--------------------------------------------------------
+    // Number of cards in deck
+#if (NOISY_TEST == 1)
+    printf("\npost.deckCount[%d]: %d, expected: %d", p, post->deckCount[p], pre.deckCount[p]);
+#endif
+    failures += assertEqual(post->deckCount[p], pre.deckCount[p]);
+
+    if(testAll && pre.deckCount[p] != 0){
+#if (NOISY_TEST == 1)
+        printf("\nComparing memory of post->deck[%d] to expected", p);
+#endif
+        failures += assertMemEqual(post->deck[p], (int*)&pre.deck[p], sizeof(int) * pre.deckCount[p]);
+    }
+
+    //--------------------------------------------------------
+    // Number of cards in discard
+#if (NOISY_TEST == 1)
+    printf("\npost.discardCount[%d]: %d, expected: %d", p, post->discardCount[p], pre.discardCount[p]);
+#endif
+    failures += assertEqual(post->discardCount[p], pre.discardCount[p]);
+
+    if(testAll && pre.discardCount[p] != 0){
+#if (NOISY_TEST == 1)
+        printf("\nComparing memory of post->discard[%d] to expected", p);
+#endif
+        failures += assertMemEqual(post->discard[p], (int*)&pre.discard[p], sizeof(int) * pre.discardCount[p]);
+    }
+
+    return failures;
 }

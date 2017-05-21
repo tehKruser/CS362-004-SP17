@@ -1,140 +1,160 @@
-/*******************************
-* Author: Derek Harris
-* Course: CS362 
-* Assignment: Assignment #3
-* File: unittest3.c
-*******************************/
+/*
+ * unittest3.c
+ *
+
+ */
+
+/*
+ * Include the following lines in your makefile:
+ *
+ * unittest3: unittest3.c dominion.o rngs.o
+ *      gcc -o unittest3 -g  unittest3.c dominion.o rngs.o $(CFLAGS)
+ */
+
 
 #include "dominion.h"
 #include "dominion_helpers.h"
-#include "rngs.h"
-#include "interface.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <math.h>
 #include <string.h>
+#include <stdio.h>
+#include <assert.h>
+#include "rngs.h"
+#include <stdlib.h>
 
-#define FUNC_NAME "getCost()"
+#define UNITTEST "unittest3"
+#define FUNCTEST "endTurn()"
 
-/****************************************
-* Dominion function to test: getCost() 
-* Conditions:
-*   return cost if: 
-*     -card is enumerated
-*     -card has a cost
-****************************************/
+// set NOISY_TEST to 0 to remove printfs from output
+#define NOISY_TEST 1
 
-//Function prototypes
-void myAssert(int, int, int*);
-void myAssertNoCounter(int, int);
+int main() {
+    int assertEqual(int v1, int v2);
 
-/***************
-* Main function
-***************/
-int main(int argc, char ** argv)
-{
-  int passCount = 0;						//variable to store number of test conditions passed
-  int numTests = 2;						//variable to store number of test conditions for unit test
-  int numPlayers = 2;						//variable to store number of players
-  int card = -1;						//variable to store card # of selected card
-  int result = 0; 						//variable to store function call result value
-  int seed = 1000;						//variable to store value for randomSeed
-  int k[10] = {adventurer, gardens, embargo, village, minion, 
-		mine, cutpurse, sea_hag, tribute, smithy};	//array to store selecte kingdom cards
-  struct gameState G;						//struct to store gameState values
+    int i, p, p_next, numPlayers;
+    int seed = 1000;
+    int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
+    int test_hand[5] = {adventurer, council_room, feast, gardens, mine};
 
-  result = initializeGame(numPlayers, k, seed, &G);		//initialize a game and set initial state	
- 
-  printf("***************\n");
-  printf("* Unittest 3: *\n");
-  printf("***************\n");
-  printf("\n----------Testing function: %s----------\n", FUNC_NAME);
+    struct gameState G;
+    int testFailures = 0;
 
-  //------------- generate random supply counts and ensure none are equal to zero --------------
+    printf("----------------- %s Testing: %s ----------------", UNITTEST, FUNCTEST);
 
-  for(int i = 0; i < 26; i++)
-  {
-	G.supplyCount[i] = (rand() % 9) + 1;			//give each card a random supply count
-	//printf("    G.supplyCount[%d] = %d\n", i, G.supplyCount[i]);
-  }
-  printf("\n");
+    for (numPlayers = 2; numPlayers <= MAX_PLAYERS; numPlayers++) {
+#if (NOISY_TEST == 1)
+        printf("\n***Switching to a %d player game.", numPlayers);
+#endif
+        memset(&G, 23, sizeof(struct gameState));   // clear the game state
+        initializeGame(numPlayers, k, seed, &G); // initialize a new game
+        for (p = 0; p < numPlayers; p++) {
+            for(i = 0; i < 5; i++){
+                G.hand[p][i] = test_hand[i];
+            }
+#if (NOISY_TEST == 1)
+            printf("\n***Ending turn for player %d.", p);
+#endif
+            G.whoseTurn = p;
+            endTurn(&G);
 
+#if (NOISY_TEST == 1)
+            //printf("\nTest that player whose turn ended 0 cards in hand.");
+            printf("\nG.handCount[%d]: %d, expected: 0", p, G.handCount[p]);
+#endif
+            testFailures += assertEqual(G.handCount[p], 0);
 
-  //-------------- Test 1 - getCost() for randomly selected card ------------------
-  printf("  Test 1 - randomly select card and get cost: ");
+            //printf("\nTest that player whose turn ended has discarded hand.");
+            for(i = 0; i < 5 ; i++){
+#if (NOISY_TEST == 1)
+                printf("\nG.hand[%d][%d]: %d, expected: -1", p, i, G.hand[p][i]);
+#endif
+                testFailures += assertEqual(G.hand[p][i], -1);
+            }
 
-  card = rand() % 26;						//randomly choose a card
+#if (NOISY_TEST == 1)
+            //printf("\nTest that player whose turn ended 0 cards in hand.");
+            printf("\nG.discardCount[%d]: %d, expected: 5", p, G.discardCount[p]);
+#endif
+            testFailures += assertEqual(G.discardCount[p], 5);
 
-  result = getCost(card);					//get return value of function
-  myAssert(result, 0, &passCount);				//expected result is 0
+            //printf("\nTest that player whose turn ended has correct cards in discard.");
+            for(i = 0; i < 5 ; i++){
+#if (NOISY_TEST == 1)
 
-  printf("    test buying card # %d:\n", card);
-  printf("      -card cost = %d\n", getCost(card));
-  printf("\n    getCost() return val is: %d and expected return val is: >= 0\n", result);
+                printf("\nG.discard[%d][%d]: %d, expected: %d", p, i, G.discard[p][i], test_hand[i]);
+#endif
+                testFailures += assertEqual(G.discard[p][i], test_hand[i]);
+            }
 
-  printf("----------------------------------------------------\n");
+            //Determine whose turn it is
+            if(p < numPlayers - 1) {
+                p_next = p + 1;
+            } else {
+                p_next = 0;
+            }
 
-  //-------------- Test 2 - getCost() for card not listed ------------------
-  printf("  Test 2 - get cost for card #999 'swamp': ");
+#if (NOISY_TEST == 1)
+            //printf("\nTest next player and game values.");
+            printf("\nG.whoseTurn: %d, expected: %d", G.whoseTurn, p_next);
+#endif
+            testFailures += assertEqual(G.whoseTurn, p_next);
 
-  card = 999;							//select an unimplemented card
+            int expected_outpostPlayed = 0;
+            int expected_phase = 0;
+            int expected_numActions = 1;
+            int expected_numBuys = 1;
+            int expected_playedCardCount = 0;
+            int expected_handCount = 5;
 
-  result = getCost(card);					//get return value of function
-  myAssert(result, -1, &passCount);				//expected result is -1
+#if (NOISY_TEST == 1)
+            printf("\nG.outpostPlayed: %d, expected: %d", G.outpostPlayed, expected_outpostPlayed);
+#endif
+            testFailures += assertEqual(G.outpostPlayed, expected_outpostPlayed);
 
-  printf("    test buying card # %d:\n", card);
-  printf("      -card cost = %d\n", getCost(card));
-  printf("\n    getCost() return val is: %d and expected return val is: -1\n", result);
+#if (NOISY_TEST == 1)
+            printf("\nG.phase: %d, expected: %d", G.phase, expected_phase);
+#endif
+            testFailures += assertEqual(G.phase, expected_phase);
 
-  printf("----------------------------------------------------\n");
+#if (NOISY_TEST == 1)
+            printf("\nG.numActions: %d, expected: %d", G.numActions, expected_numActions);
+#endif
+            testFailures += assertEqual(G.numActions, expected_numActions);
 
-  // ---------------------- Print test results ---------------------------
-  printf(">>>>> Unittest 3 complete. Function %s Passed [%d of %d] tests. <<<<<\n\n", FUNC_NAME, passCount, numTests);
-	
-  return 0;
+#if (NOISY_TEST == 1)
+            printf("\nG.numBuys: %d, expected: %d", G.numBuys, expected_numBuys);
+#endif
+            testFailures += assertEqual(G.numBuys, expected_numBuys);
+
+#if (NOISY_TEST == 1)
+            printf("\nG.playedCardCount: %d, expected: %d", G.playedCardCount, expected_playedCardCount);
+#endif
+            testFailures += assertEqual(G.playedCardCount, expected_playedCardCount);
+
+#if (NOISY_TEST == 1)
+            printf("\nG.handCount[G.whoseTurn]: %d, expected: %d", G.handCount[G.whoseTurn], expected_handCount);
+#endif
+            testFailures += assertEqual(G.handCount[G.whoseTurn], expected_handCount);
+
+        }
+    }
+
+    printf("\n\nUNIT TEST %s COMPLETED: ", UNITTEST);
+
+    if(testFailures == 0){
+        printf("All tests passed!\n\n");
+    } else {
+        printf("%d failures!\n\n", testFailures);
+    }
+
+    return 0;
 }
 
-/*--------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------*/
 
-/*******************************************
-* Function: myAssert
-* Input: int left, int right, int* count
-* Output: none
-* Description: prints result message based on
-* the condition test between left value and 
-* right value
-********************************************/
-void myAssert(int left, int right, int* count)
-{
-  if(left >= right)
-  {
-	printf("test passed!\n");
-	*count+=1;
-  }
-  else
-  {
-	printf("test failed!\n");
-  }
-}
-
-/*******************************************
-* Function: myAssertNoCounter
-* Input: int res
-* Output: none
-* Description: prints result message based on
-* the condition test between left value and 
-* right value
-********************************************/
-void myAssertNoCounter(int left, int right)
-{
-  if(left == right)
-  {
-	printf("test passed!\n");
-  }
-  else
-  {
-	printf("test failed!\n");
-  }
+int assertEqual(int v1, int v2){
+    if(v1 == v2){
+        //printf("RESULT: PASS\n");
+        return 0;
+    } else {
+        printf("\t<------------------- TEST FAILED");
+        return 1;
+    }
 }

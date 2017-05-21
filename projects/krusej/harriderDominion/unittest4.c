@@ -1,145 +1,166 @@
-/*******************************
-* Author: Derek Harris
-* Course: CS362 
-* Assignment: Assignment #3
-* File: unittest4.c
-*******************************/
+/*
+ * unittest4.c
+ *
+
+ */
+
+/*
+ * Include the following lines in your makefile:
+ *
+ * unittest4: unittest4.c dominion.o rngs.o
+ *      gcc -o unittest4 -g  unittest4.c dominion.o rngs.o $(CFLAGS)
+ */
+
 
 #include "dominion.h"
 #include "dominion_helpers.h"
-#include "rngs.h"
-#include "interface.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <math.h>
 #include <string.h>
+#include <stdio.h>
+#include <assert.h>
+#include "rngs.h"
+#include <stdlib.h>
 
-#define FUNC_NAME "updateCoins()"
+#define UNITTEST "unittest4"
+#define FUNCTEST "discardCard()"
 
-/****************************************
-* Dominion function to test: updateCoins() 
-* Conditions:
-*   return cost if: 
-*     -add coins for each treasure card in
-*       player's hand
-*     -add bonus if required
-****************************************/
+// set NOISY_TEST to 0 to remove printfs from output
+#define NOISY_TEST 1
 
-//Function prototypes
-void myAssert(int, int, int*);
-void myAssertNoCounter(int, int);
+int main() {
+    int assertEqual(int v1, int v2);
 
-/***************
-* Main function
-***************/
-int main(int argc, char ** argv)
-{
-  int bonus = 0;
-  int passCount = 0;						//variable to store number of test conditions passed
-  int numTests = 2;						//variable to store number of test conditions for unit test
-  int numPlayers = 2;						//variable to store number of players
-  int result = 0; 						//variable to store function call result value
-  int seed = 1000;						//variable to store value for randomSeed
-  int k[10] = {adventurer, gardens, embargo, village, minion, 
-		mine, cutpurse, sea_hag, tribute, smithy};	//array to store selecte kingdom cards
-  struct gameState G;						//struct to store gameState values
-  struct gameState testG;
+    int i, p, numPlayers, trashFlag, handPos, cardsInHand, index
+        , expected_discardCount, expected_discardedCard
+        , expected_handCount, expected_cardInHandPos, expected_lastCardInHand;
+    int seed = 1000;
+    int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
 
-  result = initializeGame(numPlayers, k, seed, &G);		//initialize a game and set initial state	
- 
-  printf("***************\n");
-  printf("* Unittest 4: *\n");
-  printf("***************\n");
-  printf("\n----------Testing function: %s----------\n", FUNC_NAME);
+    struct gameState G;
+    int testFailures = 0;
 
-  //------------- generate random supply counts and ensure none are equal to zero --------------
+    printf("----------------- %s Testing: %s ----------------", UNITTEST, FUNCTEST);
 
-  for(int i = 0; i < 26; i++)
-  {
-	G.supplyCount[i] = (rand() % 9) + 1;			//give each card a random supply count
-	//printf("    G.supplyCount[%d] = %d\n", i, G.supplyCount[i]);
-  }
-  printf("\n");
+    // Cycle through number of players that can be in a game
+    for (numPlayers = 2; numPlayers <= MAX_PLAYERS; numPlayers++) {
+#if (NOISY_TEST == 1)
+        printf("\n***Switching to a %d player game.", numPlayers);
+#endif
+        // Cycle through each player
+        for (p = 0; p < numPlayers; p++) {
+#if (NOISY_TEST == 1)
+            printf("\n***Switching to player %d.", p);
+#endif
 
-  memcpy(&testG, &G, sizeof(struct gameState));			//create a copy of current gameState G
+            for(trashFlag = 0; trashFlag <= 1; trashFlag++){
+#if (NOISY_TEST == 1)
+                printf("\n***trashFlag: %d.", trashFlag);
+#endif
+                for(cardsInHand = 1; cardsInHand <= 5; cardsInHand++){
+#if (NOISY_TEST == 1)
+                printf("\n***Cards in Hand: %d.", cardsInHand);
+#endif
+                    // Discard each card in a player's hand
+                    for(handPos = 0; handPos < cardsInHand; handPos++){
+#if (NOISY_TEST == 1)
+                        printf("\n***Discarding card at position %d in hand.", handPos);
+#endif
 
-  //-------------- Test 1 - updateCoins() for current player ------------------
-  printf("  Test 1 - updateCoins for current player: ");
+                        // initialize game
+                        memset(&G, 23, sizeof(struct gameState));   // clear the game state
+                        initializeGame(numPlayers, k, seed, &G); // initialize a new game
 
-  bonus = 0;
+                        //Set player's hand
+                        G.handCount[p] = cardsInHand;
+                        for(i = 0; i < cardsInHand; i++){
+                            G.hand[p][i] = k[i];
+                        }
+                        // Set the first played card to a value for testing against
+                        G.discard[p][0] = -1;
 
-  result = updateCoins(0, &testG, bonus);			//get return value of function
-  myAssert(result, 0, &passCount);				//expected result is 0
+                        // -------------- trashFlag:  Expected Values after discardCard() --------------
+                        if(trashFlag == 0){
+                            expected_discardedCard = G.hand[p][handPos];
+                            expected_discardCount = G.discardCount[p] + 1;
+                            index = G.discardCount[p];
+                        } else {
+                            if(G.discardCount[p] == 0){
+                                expected_discardedCard = -1;
+                                index = 0;
+                            } else {
+                                expected_discardedCard = G.discard[p][G.discardCount[p] - 1];
+                                index = G.discardCount[p] - 1;
+                            }
+                            expected_discardCount = G.discardCount[p];
+                        }
 
-  printf("    comparing current gamestate to previous gamestate:\n");
-  printf("      -bonus = %d\n", bonus);
-  printf("      -current coins with bonus = %d and previous gamestate coins = %d\n", testG.coins, G.coins);
-  printf("\n    updateCoin() return val is: %d and expected return val is: 0\n", result);
+                        // -------------- player Hand: Expected Values after discardCard() --------------
+                        expected_handCount = cardsInHand - 1;
+                        if(handPos == (cardsInHand - 1)){               //if handPos is last card in hand
+                            expected_cardInHandPos = -1;
+                            expected_lastCardInHand = -1;
+                        } else if ((cardsInHand == 1)){                 // if there is only 1 card in hand
+                            expected_cardInHandPos = -1;
+                            expected_lastCardInHand = -1;
+                        } else {
+                            expected_cardInHandPos = G.hand[p][cardsInHand - 1];
+                            expected_lastCardInHand = -1;
+                        }
 
-  printf("----------------------------------------------------\n");
+                        // discard
+                        discardCard(handPos, p, &G, trashFlag);
 
-  //-------------- Test 2 - updateCoins() for current player with bonus ------------------
-  printf("  Test 2 - updateCoins with bonus > 0 for current player: ");
+                        // test
+#if (NOISY_TEST == 1)
+                        printf("\nG.discard[%d][%d]: %d, expected: %d", p, index, G.discard[p][index], expected_discardedCard);
+#endif
+                        testFailures += assertEqual(G.discard[p][index], expected_discardedCard);
 
-  bonus = 5;
+#if (NOISY_TEST == 1)
+                        printf("\nG.discardCount[p]: %d, expected: %d", G.discardCount[p], expected_discardCount);
+#endif
+                        testFailures += assertEqual(G.discardCount[p], expected_discardCount);
 
-  result = updateCoins(0, &testG, bonus);			//get return value of function
-  myAssert(result, 0, &passCount);				//expected result is 0
+#if (NOISY_TEST == 1)
+                        printf("\nG.handCount[%d]: %d, expected: %d", p, G.handCount[p], expected_handCount);
+#endif
+                        testFailures += assertEqual(G.handCount[p], expected_handCount);
 
-  printf("    comparing current gamestate to previous gamestate:\n");
-  printf("      -bonus = %d\n", bonus);
-  printf("      -current coins with bonus = %d and previous gamestate coins = %d\n", testG.coins, G.coins);
-  printf("\n    updateCoin() return val is: %d and expected return val is: 0\n", result);
+#if (NOISY_TEST == 1)
+                        printf("\nG.hand[%d][%d]: %d, expected: %d", p, handPos, G.hand[p][handPos], expected_cardInHandPos);
+#endif
+                        testFailures += assertEqual(G.hand[p][handPos], expected_cardInHandPos);
 
-  printf("----------------------------------------------------\n");
+#if (NOISY_TEST == 1)
+                        printf("\nG.hand[%d][%d]: %d, expected: %d", p, cardsInHand -1, G.hand[p][cardsInHand -1], expected_lastCardInHand);
+#endif
+                        testFailures += assertEqual(G.hand[p][cardsInHand -1], expected_lastCardInHand);
 
-  // ---------------------- Print test results ---------------------------
-  printf(">>>>> Unittest 4 complete. Function %s Passed [%d of %d] tests. <<<<<\n\n", FUNC_NAME, passCount, numTests);
-	
-  return 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    printf("\n\nUNIT TEST %s COMPLETED: ", UNITTEST);
+
+    if(testFailures == 0){
+        printf("All tests passed!\n\n");
+    } else {
+        printf("%d failures!\n\n", testFailures);
+    }
+
+    return 0;
 }
 
-/*--------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------*/
 
-/*******************************************
-* Function: myAssert
-* Input: int left, int right, int* count
-* Output: none
-* Description: prints result message based on
-* the condition test between left value and 
-* right value
-********************************************/
-void myAssert(int left, int right, int* count)
-{
-  if(left >= right)
-  {
-	printf("test passed!\n");
-	*count+=1;
-  }
-  else
-  {
-	printf("test failed! result is: %d and expected result is: %d\n", left, right);
-  }
-}
-
-/*******************************************
-* Function: myAssertNoCounter
-* Input: int res
-* Output: none
-* Description: prints result message based on
-* the condition test between left value and 
-* right value
-********************************************/
-void myAssertNoCounter(int left, int right)
-{
-  if(left == right)
-  {
-	printf("test passed!\n");
-  }
-  else
-  {
-	printf("test failed!\n");
-  }
+int assertEqual(int v1, int v2){
+    if(v1 == v2){
+        //printf("RESULT: PASS\n");
+        return 0;
+    } else {
+        printf("\t<------------------- TEST FAILED");
+        return 1;
+    }
 }

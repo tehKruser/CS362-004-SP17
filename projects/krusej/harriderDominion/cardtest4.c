@@ -1,10 +1,9 @@
-/****************************
-* Author: Derek Harris
-* Course: CS362
-* Assignment: Assignment 3
-* File: cardtest4.c
-*****************************/
- 
+/*
+ * cardtest4.c
+ *
+
+ */
+
 /*
  * Include the following lines in your makefile:
  *
@@ -12,163 +11,168 @@
  *      gcc -o cardtest4 -g  cardtest4.c dominion.o rngs.o $(CFLAGS)
  */
 
+
 #include "dominion.h"
 #include "dominion_helpers.h"
-#include "rngs.h"
-#include "interface.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
 #include <string.h>
+#include <stdio.h>
+#include <assert.h>
+#include "rngs.h"
+#include <stdlib.h>
 
-#define TESTCARD "great_hall"
+#define UNITTEST "cardtest4"
+#define FUNCTEST "salvager"
 
-//Function prototypes
-void myAssert(int, int, int*);
-void myAssertLessThan(int, int, int*);
-
-/****************
-* Main function
-****************/
-int main() 
-{
-  int newActions = 0;					//variable to store # of new actions
-  int passCount = 0;					//variable to store # of tests passed
-  int numTests = 3;					//variable to store # of tests
-  int newCards = 0;					//variable to store # of new cards
-  int discarded = 0;					//variable to store # of discarded cards
-  int shuffledCards = 0;				//variable to store # of cards shuffled into deck
-  int handpos = 0;					//variable to store hand position
-  int choice1=0, choice2=0, choice3=0, bonus=0;		//variables to initialize choice and bonus
-  int seed = 1000;					//seed for initialize game function
-  int numPlayers = 2;					//variable to store # of players
-  int thisPlayer = 0;					//variable to identify current player
-  int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
-			sea_hag, tribute, smithy, council_room};
-  struct gameState G; 					//struct to store gamestate values
-  struct gameState testG;				//struct to store test gamestate values
-
-  // initialize a game state and player cards
-  initializeGame(numPlayers, k, seed, &G);
-
-  printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
-
-  // ----------- TEST 1: +1 cards & +1 actions --------------
-  printf("TEST 1: +1 new cards and +1 actions\n");
-
-  // copy the game state to a test case
-  memcpy(&testG, &G, sizeof(struct gameState));
-
-  printf("\ntestG.handCount[thisPlayer] = %d, G.handCount[thisPlayer] = %d\n\n", testG.handCount[thisPlayer], G.handCount[thisPlayer]);
-
-  cardEffect(great_hall, choice1, choice2, choice3, &testG, handpos, &bonus);			//call the card's function
-
-  newCards = 1;											//declare # of new cards
-  discarded = 1;										//declare # of cards to discard
-  newActions = 1;
-
-  printf("hand count = %d, expected = %d : ", testG.handCount[thisPlayer], G.handCount[thisPlayer] + newCards - discarded); 
-  myAssert(testG.handCount[thisPlayer], G.handCount[thisPlayer] + newCards - discarded, &passCount);
-
-  printf("deck count = %d, expected = %d : ", testG.deckCount[thisPlayer], G.deckCount[thisPlayer] - newCards + shuffledCards);
-  myAssertLessThan(testG.deckCount[thisPlayer], G.deckCount[thisPlayer] - newCards + shuffledCards, &passCount);
-
-  printf("actions count = %d, expected = %d : ", testG.numActions, G.numActions + newActions);
-  myAssert(testG.numActions, G.numActions + newActions, &passCount);
-
-  printf("---------------------------------------------------\n");
-
-  //------------- Check other player states ------------------
-  printf("\nChecking other player states...\n\n");
-
-  for(int i = 1; i < numPlayers; i++)
-  {
-    printf("player[%d] hand count = %d, expected = %d : ", i, testG.handCount[i], G.handCount[i]);
-    myAssert(testG.handCount[i], G.handCount[i], &passCount);
-
-    printf("player[%d] deck count = %d, expected = %d : ", i, testG.deckCount[i], G.deckCount[i]);
-    myAssert(testG.deckCount[i], G.deckCount[i], &passCount);
-  
-    numTests = numTests + 2;
-  }
-
-  //------------- Check kingdom and victory card ------------------
-  printf("\nTesting Kingdom Card and Victory Card states...\n\n");
-
-  for(int j = 0; j < 10; j++)
-  {
-    printf("kingdom card k[%d] supply count = %d, expected = %d : ", j, testG.supplyCount[k[j]], G.supplyCount[k[j]]);
-    myAssert(testG.supplyCount[k[j]], G.supplyCount[k[j]], &passCount);
-
-    numTests = numTests + 1;
-  }
-
-  printf("\n");
-
-  printf("victory card [estate] supply count = %d, expected = %d : ", testG.supplyCount[estate], G.supplyCount[estate]);
-  myAssert(testG.supplyCount[estate], G.supplyCount[estate], &passCount);
-
-  numTests = numTests + 1;
-
-  printf("victory card [duchy] supply count = %d, expected = %d : ", testG.supplyCount[duchy], G.supplyCount[duchy]);
-  myAssert(testG.supplyCount[duchy], G.supplyCount[duchy], &passCount);
-
-  numTests = numTests + 1;
-
-  printf("victory card [province] supply count = %d, expected = %d : ", testG.supplyCount[province], G.supplyCount[province]);
-  myAssert(testG.supplyCount[province], G.supplyCount[province], &passCount);
-
-  numTests = numTests + 1;
-
-  printf("---------------------------------------------------\n");
-
-  //----------------------- print results -------------------------------
-  printf("\n >>>> SUCCESS: Testing card [%s] complete.  Passed [%d of %d] tests <<<<\n\n", TESTCARD, passCount, numTests);
+// set NOISY_TEST to 0 to remove printfs from output
+#define NOISY_TEST 1
 
 
-  return 0;
+int main() {
+    int assertEqual(int v1, int v2);
+    int run_test(int handPos, int trashPos, int* test_hand);
+    int handPos, trashPos;
+
+    printf("----------------- %s Testing: %s ----------------", UNITTEST, FUNCTEST);
+
+    int testFailures = 0;
+
+    for(handPos = 0; handPos < 5; handPos++){
+        for(trashPos = 0; trashPos < 5; trashPos++){
+            int test_hand[5] = {adventurer, council_room, feast, gardens, mine};
+            test_hand[handPos] = salvager;
+            testFailures += run_test(handPos, trashPos, test_hand);
+        }
+    }
+
+    printf("\n\nUNIT TEST %s COMPLETED: ", UNITTEST);
+
+    if(testFailures == 0){
+        printf("All tests passed!\n\n");
+    } else {
+        printf("%d failures!\n\n", testFailures);
+    }
+
+    return 0;
 }
 
-/*************************************************************************************/
-/*************************************************************************************/
 
-
-/**********************************
-* Function: myAssert()
-* Input: int left, int right
-* Output: none
-* Description: compares left value
-*   to right and displays a message
-**********************************/
-void myAssert(int left, int right, int* count)
-{
-  if(left == right)
-  {
-    printf("test passed!\n");
-    *count+=1;
-  }
-  else
-  {
-    printf("test failed!\n");
-  }
+int assertEqual(int v1, int v2){
+    if(v1 == v2){
+        //printf("RESULT: PASS\n");
+        return 0;
+    } else {
+        printf("\t<------------------- TEST FAILED");
+        return 1;
+    }
 }
 
-/**********************************
-* Function: myAssertLessThan()
-* Input: int left, int right
-* Output: none
-* Description: compares left value
-*   to right and displays a message
-**********************************/
-void myAssertLessThan(int left, int right, int* count)
-{
-  if(left <= right)
-  {
-    printf("test passed!\n");
-    *count+=1;
-  }
-  else
-  {
-    printf("test failed!\n");
-  }
+
+int run_test(int handPos, int trashPos, int* test_hand){
+
+    int seed = 1000;
+    int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
+    int numPlayers = 2;
+    int i, trashCard, xtraCoins, x2discard, xinHand;
+    int p = 0;
+    struct gameState G;
+
+    //int failcount;
+    int failures = 0;
+
+    // initialize game
+    memset(&G, 23, sizeof(struct gameState));   // clear the game state
+    initializeGame(numPlayers, k, seed, &G); // initialize a new game
+
+    // set player's hand
+    G.handCount[p] = 5;
+    for(i = 0; i < 5; i++){
+        G.hand[p][i] = test_hand[i];
+    }
+
+    G.whoseTurn = p;
+    G.discardCount[p] = 0;                  // set player's discard
+    G.numBuys = 1;
+    G.coins = 0;
+    trashCard = test_hand[trashPos];        // card to be trashed
+    xtraCoins = getCost(trashCard);
+
+    if (trashPos == handPos){
+        x2discard = 0;
+        xinHand = 4;
+    } else {
+        x2discard = 1;
+        xinHand = 3;
+    }
+
+
+    int bonus  = 0;
+    // run card
+    cardEffect(salvager, trashPos, 0, 0, &G, handPos, &bonus);
+
+    //--------------------------------------------------------
+    // test for correct results
+    printf("\nTEST %d: SALVAGER CARD AT HANDPOS %d, TRASHING HANDPOS %d", handPos+1, handPos, trashPos);
+
+
+    //--------------------------------------------------------
+    // Check number of buys
+#if (NOISY_TEST == 1)
+    printf("\nG.numBuys: %d, expected: %d", G.numBuys, 2);
+#endif
+    failures += assertEqual(G.numBuys, 2);
+
+    //--------------------------------------------------------
+    // Check extra coins
+#if (NOISY_TEST == 1)
+    printf("\nG.coins: %d, expected: %d", G.coins, xtraCoins);
+#endif
+    failures += assertEqual(G.coins, xtraCoins);
+
+
+    //--------------------------------------------------------
+    // Number of cards in hand
+#if (NOISY_TEST == 1)
+    printf("\nG.handCount[%d]: %d, expected: %d", p, G.handCount[p], xinHand);
+#endif
+    failures += assertEqual(G.handCount[p], xinHand);
+
+    //--------------------------------------------------------
+    // Correct cards in hand
+    int card;
+    for(i = 0; i < xinHand; i++){
+        if(i == trashPos){
+            card = test_hand[4];
+        } else if(i == handPos){
+            if(trashPos == 3){
+                card = test_hand[4];
+            } else {
+                card = test_hand[3];
+            }
+        } else {
+            card = test_hand[i];
+        }
+
+#if (NOISY_TEST == 1)
+        printf("\nG.hand[%d][%d]: %d, expected: %d", p, i, G.hand[p][i], card);
+#endif
+        failures += assertEqual(G.hand[p][i], card);
+    }
+
+    //--------------------------------------------------------
+    // Number of cards in discard
+#if (NOISY_TEST == 1)
+    printf("\nG.discardCount[%d]: %d, expected: %d", p, G.discardCount[p], x2discard);
+#endif
+    failures += assertEqual(G.discardCount[p], x2discard);
+
+    //--------------------------------------------------------
+    // Check cards in discard pile
+    if(x2discard == 1){
+#if (NOISY_TEST == 1)
+        printf("\nG.discard[%d][0]: %d, expected: %d", p, G.discard[p][0], salvager);
+#endif
+        failures += assertEqual(G.discard[p][0], salvager);
+    }
+
+    return failures;
 }
