@@ -1,0 +1,208 @@
+==============================================================================================
+
+Title:    Template
+
+Class:
+e.g. "Feature Request", "System Error", "Serious Bug"
+
+Class:	Serious Bug
+
+Date:   		05/21/2017        
+Reported By:   	Justin Kruse
+Email:      	krusej@onid.oregonstate.edu
+
+Product:	dominion.c		Version:	https://github.com/harrider/CS362-004-SP17/tree/master/projects/harrider
+Platform:	CentOS Linux	Version:	7.2.1511
+
+Is it reproducible: Yes
+
+Description
+===========
+
+
+
+Steps to Produce/Reproduce
+--------------------------
+
+
+
+Expected Results / Actual Results
+----------------------------------
+
+
+
+Attachments
+-----------
+
+
+
+==============================================================================================
+
+Title:	Incorrect card counts when calling AdventurerFunc
+
+Class:	Serious Bug
+
+Date:   		05/21/2017        
+Reported By:   	Justin Kruse
+Email:      	krusej@onid.oregonstate.edu
+
+Product:	dominion.c		Version:	https://github.com/harrider/CS362-004-SP17/tree/master/projects/harrider
+Platform:	CentOS Linux	Version:	7.2.1511
+
+Is it reproducible: Yes
+
+Description
+===========
+The following members of the game state (as defined in dominion.h) have incorrect values:
+handCount[<player number>]
+deckCount[<player number>]
+discardCount[<player number>]
+discard[<player number>][ 0 ... (discardCount[<player number>] - 1) ]
+
+
+Steps to Produce/Reproduce
+--------------------------
+1. Allocate and set memory for game state. Example:
+struct gameState G;
+for(i = 0; i < sizeof(struct gameState); i++){
+	((char*)&G)[i] = floor(Random() * 256);
+}
+
+2. In game state, set the following values:
+- p = 0 (not a gamestate value, used to pass to AdventurerFunc)
+- whoseTurn = p
+- handCount[p] = 77
+- deckCount[p] = 190
+- deck[p][181] = copper
+- deck[p][180] = copper
+Note: no treasure cards should be in the range of deck[p][182] and deck[p][189]
+- discardCount[p] = 142
+
+3. call AdventurerFunc(&G, p)
+
+
+Expected Results / Actual Results
+----------------------------------
+post.handCount[0]: 80, expected: 79	<------------------- TEST FAILED
+post.deckCount[0]: 172, expected: 180	<------------------- TEST FAILED
+post.discardCount[0]: 157, expected: 150	<------------------- TEST FAILED
+
+
+Attachments
+-----------
+randomtestadventurer.out
+
+
+
+==============================================================================================
+
+Title:	Incorrect card counts when calling SmithyFunc
+
+Class:	Serious Bug
+
+Date:   		05/21/2017        
+Reported By:   	Justin Kruse
+Email:      	krusej@onid.oregonstate.edu
+
+Product:	dominion.c		Version:	https://github.com/harrider/CS362-004-SP17/tree/master/projects/harrider
+Platform:	CentOS Linux	Version:	7.2.1511
+
+Is it reproducible: Yes
+
+Description
+===========
+The following members of the game state (as defined in dominion.h) have incorrect values:
+handCount[<player number>]
+deckCount[<player number>]
+discardCount[<player number>]
+
+
+Steps to Produce/Reproduce
+--------------------------
+1. Allocate and set memory for game state. Example:
+	int seed = 1000;
+    int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
+    int numPlayers = 2;
+    int p = 0;
+	int handPos = 0;
+    struct gameState G;
+
+    // initialize game
+    memset(&G, 23, sizeof(struct gameState));   // clear the game state
+    initializeGame(numPlayers, k, seed, &G); // initialize a new game
+
+2. In game state, set the following values:
+- whoseTurn = p
+- handCount[p] = 5
+- hand[p] = {smithy, council_room, feast, gardens, mine}
+- deckCount[p] = 6
+- deck[p] = {copper, silver, remodel, gold, village, baron}
+
+3. call SmithyFunc(&G, p, handPos)
+
+
+Expected Results / Actual Results
+----------------------------------
+G.handCount[0]: 4, expected: 7	<------------------- TEST FAILED
+G.deckCount[0]: 6, expected: 3	<------------------- TEST FAILED
+G.discardCount[0]: 0, expected: 1	<------------------- TEST FAILED
+
+
+Attachments
+-----------
+randomtestcard2.out
+
+
+
+==============================================================================================
+
+Title:	Incorrect outpostPlayed value from OutpostFunc
+
+Class:	Serious Bug
+
+Date:   		05/21/2017        
+Reported By:   	Justin Kruse
+Email:      	krusej@onid.oregonstate.edu
+
+Product:	dominion.c		Version:	https://github.com/harrider/CS362-004-SP17/tree/master/projects/harrider
+Platform:	CentOS Linux	Version:	7.2.1511
+
+Is it reproducible: Yes
+
+Description
+===========
+The following members of the game state (as defined in dominion.h) have incorrect values:
+-outpostPlayed
+
+
+Steps to Produce/Reproduce
+--------------------------
+1. Allocate and set memory for game state. Example:
+int seed = 1000;
+int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
+int numPlayers = 2;
+int p = 0;
+int handPos = 0;
+struct gameState G;
+
+// initialize game
+memset(&G, 23, sizeof(struct gameState));   // clear the game state
+initializeGame(numPlayers, k, seed, &G); // initialize a new game
+
+2. In game state, set the following values:
+- whoseTurn = p
+- handCount[p] = 5
+- hand[p] = {outpost, council_room, feast, gardens, mine}
+
+3. call OutpostFunc(&G, p, handPos)
+
+
+Expected Results / Actual Results
+----------------------------------
+G.outpostPlayed: 0, expected: 1	<------------------- TEST FAILED
+
+
+Attachments
+-----------
+randomtestcard1.out
+

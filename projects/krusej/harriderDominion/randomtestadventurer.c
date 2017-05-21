@@ -22,7 +22,7 @@
 #include <math.h>
 
 #define UNITTEST "randomtestadventurer"
-#define FUNCTEST "adventurerCard()"
+#define FUNCTEST "AdventurerFunc()"
 
 // set NOISY_TEST to 0 to remove printfs from output
 #define NOISY_TEST 1
@@ -90,6 +90,7 @@ int main(){
         // need handCount to be able to hold all the cards in a worst case scenario
         G.handCount[p] = floor(Random() * (MAX_HAND - worstCaseHand));
 
+        printf("\nplayer: %d, handCount: %d, deckCount: %d, discardCount: %d\n", p, G.handCount[p], G.deckCount[p], G.discardCount[p]);
         testFailures += checkAdventurerCard(p, &G);
     }
 
@@ -129,7 +130,7 @@ int checkAdventurerCard(int p, struct gameState *post){
 
     int i, j, testAll;
 
-    adventurerCard(post);
+    AdventurerFunc(post, p);
 
     int treasureCount = 0;
     int card1, card2, failures;

@@ -21,7 +21,7 @@
 #include <stdlib.h>
 
 #define UNITTEST "cardtest2"
-#define FUNCTEST "smithyCard()"
+#define FUNCTEST "SmithyFunc()"
 
 // set NOISY_TEST to 0 to remove printfs from output
 #define NOISY_TEST 1
@@ -107,7 +107,7 @@ int run_test(int handPos, int* test_hand, struct card_test* ct){
     G.discardCount[p] = 0;
 
     // run card
-    smithyCard(&G, handPos);
+    SmithyFunc(&G, p, handPos);
 
     //--------------------------------------------------------
     // test for correct results

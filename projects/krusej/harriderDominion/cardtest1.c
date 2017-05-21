@@ -21,7 +21,7 @@
 #include <stdlib.h>
 
 #define UNITTEST "cardtest1"
-#define FUNCTEST "adventurerCard()"
+#define FUNCTEST "AdventurerFunc()"
 
 // set NOISY_TEST to 0 to remove printfs from output
 #define NOISY_TEST 1
@@ -144,7 +144,7 @@ int run_test(int* test_hand, struct card_test* ct){
     G.discardCount[p] = 0;
 
     // run card
-    adventurerCard(&G);
+    AdventurerFunc(&G, p);
 
     //--------------------------------------------------------
     // test for correct results

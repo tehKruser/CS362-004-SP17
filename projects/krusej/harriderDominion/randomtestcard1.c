@@ -22,7 +22,7 @@
 #include <math.h>
 
 #define UNITTEST "randomtestcard1"
-#define FUNCTEST "outpostCard()"
+#define FUNCTEST "OutpostFunc()"
 
 // set NOISY_TEST to 0 to remove printfs from output
 #define NOISY_TEST 1
@@ -102,7 +102,7 @@ int checkCard(int p, struct gameState *post, int handPos){
     struct gameState pre;
     memcpy(&pre, post, sizeof(struct gameState));
 
-    outpostCard(post, handPos, p);
+    OutpostFunc(post, p, handPos);
 
     //--------------------------------------------------------
     // Set expected outpost value

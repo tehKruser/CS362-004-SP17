@@ -21,7 +21,7 @@
 #include <stdlib.h>
 
 #define UNITTEST "cardtest3"
-#define FUNCTEST "outpost"
+#define FUNCTEST "OutpostFunc"
 
 // set NOISY_TEST to 0 to remove printfs from output
 #define NOISY_TEST 1
@@ -94,9 +94,10 @@ int run_test(int handPos, int* test_hand){
     // set outpost flag
     G.outpostPlayed = 0;
 
-    int bonus  = 0;
+    //int bonus  = 0;
     // run card
-    cardEffect(outpost, 0, 0, 0, &G, handPos, &bonus);
+    //cardEffect(outpost, 0, 0, 0, &G, handPos, &bonus);
+    OutpostFunc(&G, p, handPos);
 
     //--------------------------------------------------------
     // test for correct results

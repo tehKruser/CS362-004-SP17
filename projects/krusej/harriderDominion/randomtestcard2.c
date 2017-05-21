@@ -22,7 +22,7 @@
 #include <math.h>
 
 #define UNITTEST "randomtestcard2"
-#define FUNCTEST "smithyCard()"
+#define FUNCTEST "SmithyFunc()"
 
 // set NOISY_TEST to 0 to remove printfs from output
 #define NOISY_TEST 1
@@ -110,7 +110,7 @@ int checkCard(int p, struct gameState *post, int handPos){
     struct gameState pre;
     memcpy(&pre, post, sizeof(struct gameState));
 
-    smithyCard(post, handPos);
+    SmithyFunc(post, p, handPos);
 
     if(pre.deckCount[p] >= 3){
         testAll = 1;

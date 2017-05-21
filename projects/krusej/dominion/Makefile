@@ -122,6 +122,9 @@ all: playdom player testDrawCard testBuyCard badTestDrawCard
 
 cleantests: 
 	rm unittestresults.out unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 *.gcda *.gcno *.gcov
+
+cleanrandom:
+	rm randomtestadventurer.out randomtestcard1.out randomtestcard2.out randomtestadventurer randomtestcard1 randomtestcard2 *.gcda *.gcno *.gcov
 	
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
