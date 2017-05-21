@@ -1,0 +1,330 @@
+        -:    0:Source:randomtestcard1.c
+        -:    0:Graph:randomtestcard1.gcno
+        -:    0:Data:randomtestcard1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/****************************
+        -:    2:* Author: Derek Harris
+        -:    3:* Course: CS362
+        -:    4:* Assignment: Assignment 4
+        -:    5:* File: randomtestcard1.c
+        -:    6:*****************************/
+        -:    7: 
+        -:    8:/*
+        -:    9: * Include the following lines in your makefile:
+        -:   10: *
+        -:   11: * randomtestcard1: randomtestcard1.c dominion.o rngs.o
+        -:   12: *      gcc -o randomtestcard1 -g  randomtestcard1.c dominion.o rngs.o $(CFLAGS)
+        -:   13: */
+        -:   14:
+        -:   15:#include "dominion.h"
+        -:   16:#include "dominion_helpers.h"
+        -:   17:#include "rngs.h"
+        -:   18:#include "interface.h"
+        -:   19:#include <stdio.h>
+        -:   20:#include <stdlib.h>
+        -:   21:#include <assert.h>
+        -:   22:#include <string.h>
+        -:   23:
+        -:   24:#define TESTCARD "council_room"
+        -:   25:#define NUM_TESTS 10000
+        -:   26:
+        -:   27://Function prototypes
+        -:   28:void myAssert(int, int, int*);
+        -:   29:void myAssertLessThan(int, int, int*);
+        -:   30:
+        -:   31:/****************
+        -:   32:* Main function
+        -:   33:****************/
+function main called 1 returned 100% blocks executed 100%
+        1:   34:int main() 
+        -:   35:{
+        1:   36:  int x = 0;						//variable to store for loop counter
+        1:   37:  int j = 0;						//variable to store # treasure cards in test gamestate hand
+        1:   38:  int m = 0;						//variable to store # treasure cards in actual gamestate hand
+        1:   39:  int newBuys = 0;					//variable to store # of new buys
+        1:   40:  int passCount = 0;					//variable to store # of tests passed this iteration
+        1:   41:  int numPass = 0;					//variable to store total # of tests passed
+        1:   42:  int numFail = 0;					//variable to store total # of tests failed
+        1:   43:  int totTests = 0;					//variable to store total # of tests run
+        1:   44:  int numTests = 4;					//variable to store # of tests
+        1:   45:  int newCards = 0;					//variable to store # of new cards
+        1:   46:  int discarded = 0;					//variable to store # of discarded cards
+        1:   47:  int shuffledCards = 0;				//variable to store # of cards shuffled into deck
+        1:   48:  int handpos = 0;					//variable to store hand position
+        1:   49:  int choice1=0, choice2=0, choice3=0, bonus=0;		//variables to initialize choice and bonus
+        1:   50:  int seed = 1000;					//seed for initialize game function
+        1:   51:  int status = -1;					//variable to store result of initializing game
+        1:   52:  int numPlayers = 0;					//variable to store # of players
+        1:   53:  int thisPlayer = 0;					//variable to identify current player
+        1:   54:  int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
+        -:   55:			sea_hag, tribute, smithy, council_room};
+        -:   56:
+        -:   57:  struct gameState testG;				//struct to store test gamestate values
+        -:   58:  struct gameState* randG;				//gameState struct ptr to help create new gameStates
+        -:   59:
+    10001:   60:  for(x = 0; x < NUM_TESTS; x++)			//iterate for test case number of games
+branch  0 taken 99%
+branch  1 taken 1% (fallthrough)
+        -:   61:  {
+    10000:   62:	  seed = rand();				//random seed to initialize gamestate
+call    0 returned 100%
+    10000:   63:	  numPlayers = (rand() % MAX_PLAYERS);		//randomize number of players... chooses between 2-4 players
+call    0 returned 100%
+    10000:   64:	  randG = malloc(sizeof(struct gameState));	//create new gameState struct
+        -:   65:  
+        -:   66:
+        -:   67:	  // initialize a game state and player cards
+    10000:   68:	  status = initializeGame(numPlayers, k, seed, randG);
+call    0 returned 100%
+        -:   69:
+        -:   70:	  // initialize player hand, deck and discard pile to random numbers
+    24945:   71:	  for(int a = 0; a < numPlayers; a++)
+branch  0 taken 60%
+branch  1 taken 40% (fallthrough)
+        -:   72:	  {
+    14945:   73:		  randG->deckCount[a] = rand() % MAX_DECK;
+call    0 returned 100%
+    14945:   74:		  randG->discardCount[a] = rand() % MAX_DECK;
+call    0 returned 100%
+    14945:   75:		  randG->handCount[a] = rand() % MAX_HAND;
+call    0 returned 100%
+        -:   76:	  }
+        -:   77:
+    10000:   78:	  printf("|***********************************************************************|\n");
+call    0 returned 100%
+    10000:   79:	  printf("|***********************************************************************|\n\n");
+call    0 returned 100%
+        -:   80:
+    10000:   81:	  printf("----------------- Test # %d for Card: %s ----------------\n", x+1, TESTCARD);
+call    0 returned 100%
+        -:   82:
+        -:   83:	  // ----------- TEST 1: +4 cards & +1 buys --------------
+    10000:   84:  	  printf("TEST 1: +4 new cards and +1 buys\n");	
+call    0 returned 100%
+    10000:   85:	  printf("\n");
+call    0 returned 100%
+        -:   86:
+        -:   87:
+        -:   88:	  //test game initiliazation status...failed test should return -1, otherwise should return 0
+    10000:   89:	  if(status < 0)
+branch  0 taken 50% (fallthrough)
+branch  1 taken 50%
+        -:   90:	  {
+     5027:   91:		printf("ERROR: Players < 2. Actual number of players: %d\n", numPlayers);
+call    0 returned 100%
+        -:   92:
+     5027:   93:		printf("status of gameState initialization = %d, expected = %d : ", status, -1);
+call    0 returned 100%
+     5027:   94:		myAssert(status, -1, &passCount);	//assert test conditions here
+call    0 returned 100%
+        -:   95:
+     5027:   96:		printf("\n >>>>> SUCCESS: Test # %d for card [%s] complete.\nPassed [%d of %d] tests <<<<<\n\n", x+1, TESTCARD, passCount, 1);
+call    0 returned 100%
+     5027:   97:		printf("Continuing to next test iteration \n\n");
+call    0 returned 100%
+        -:   98:
+     5027:   99:		numPass = numPass + passCount;		//record number of tests passed
+     5027:  100:		numFail = numFail + (1 - passCount);	//record number of tests failed
+     5027:  101:		totTests = totTests + 1;		//record total number of tests
+        -:  102:
+     5027:  103:		passCount = 0;
+     5027:  104:		numTests = 4;
+     5027:  105:		free(randG);				//free dynamically allocated memory
+     5027:  106:		continue;
+        -:  107:	  }
+        -:  108:	  else
+        -:  109:	  {
+     4973:  110:	  	printf("status of gameState initialization = %d, expected = %d : ", status, 0);
+call    0 returned 100%
+     4973:  111:	  	myAssert(status, 0, &passCount);
+call    0 returned 100%
+        -:  112:	  }
+        -:  113:
+        -:  114:	  // copy the game state to a test case
+     4973:  115:	  memcpy(&testG, randG, sizeof(struct gameState));
+        -:  116:
+     4973:  117:	  printf("\ntestG.handCount[thisPlayer] = %d, randG->handCount[thisPlayer] = %d\n\n", testG.handCount[thisPlayer], randG->handCount[thisPlayer]);
+call    0 returned 100%
+        -:  118:
+     4973:  119:	  cardEffect(council_room, choice1, choice2, choice3, &testG, handpos, &bonus);			//call the card's function
+call    0 returned 100%
+        -:  120:
+     4973:  121:	  newCards = 4;											//declare # of new cards
+     4973:  122:	  discarded = 1;										//declare # of cards to discard
+     4973:  123:	  newBuys = 1;											//declare # of new buys to add
+        -:  124:
+     4973:  125:	  printf("hand count = %d, expected = %d : ", testG.handCount[thisPlayer], randG->handCount[thisPlayer] + newCards - discarded); 
+call    0 returned 100%
+     4973:  126:	  myAssert(testG.handCount[thisPlayer], randG->handCount[thisPlayer] + newCards - discarded, &passCount);
+call    0 returned 100%
+        -:  127:
+     4973:  128:	  printf("deck count = %d, expected = %d : ", testG.deckCount[thisPlayer], randG->deckCount[thisPlayer] - newCards + shuffledCards);
+call    0 returned 100%
+     4973:  129:	  myAssertLessThan(testG.deckCount[thisPlayer], randG->deckCount[thisPlayer] - newCards + shuffledCards, &passCount);
+call    0 returned 100%
+        -:  130:
+     4973:  131:	  printf("buys count = %d, expected = %d : ", testG.numBuys, randG->numBuys + newBuys);
+call    0 returned 100%
+     4973:  132:	  myAssert(testG.numBuys, randG->numBuys + newBuys, &passCount);
+call    0 returned 100%
+        -:  133:
+     4973:  134:	  printf("---------------------------------------------------\n");
+call    0 returned 100%
+        -:  135:
+        -:  136:	  // ----------- TEST 2: +1 cards for other playres --------------
+     4973:  137:	  printf("\nTEST 2: +1 card for other players\n\n");
+call    0 returned 100%
+        -:  138:
+        -:  139:	  // copy the game state to a test case
+     4973:  140:	  memcpy(&testG, randG, sizeof(struct gameState));
+        -:  141:
+     4973:  142:	  cardEffect(council_room, choice1, choice2, choice3, &testG, handpos, &bonus);			//call the card's function
+call    0 returned 100%
+        -:  143:
+     4973:  144:	  newCards = 1;											//declare # of new cards
+     4973:  145:	  discarded = 0;										//declare # of cards to discard
+     4973:  146:	  newBuys = 0;											//declare # of new buys to add
+        -:  147:
+        -:  148:	  //------------- Check other player states ------------------
+    12464:  149:	  for(int i = 1; i < numPlayers; i++)
+branch  0 taken 60%
+branch  1 taken 40% (fallthrough)
+        -:  150:	  {
+     7491:  151:	    printf("player[%d] hand count = %d, expected = %d : ", i+1, testG.handCount[i], randG->handCount[i] + newCards - discarded); 
+call    0 returned 100%
+     7491:  152:	    myAssert(testG.handCount[i], randG->handCount[i] + newCards - discarded, &passCount);
+call    0 returned 100%
+     7491:  153:	    numTests = numTests + 1;
+        -:  154:
+     7491:  155:	    printf("player[%d] deck count = %d, expected = %d : ", i+1, testG.deckCount[i], randG->deckCount[i] - newCards + shuffledCards);
+call    0 returned 100%
+     7491:  156:	    myAssertLessThan(testG.deckCount[i], randG->deckCount[i] - newCards + shuffledCards, &passCount);
+call    0 returned 100%
+     7491:  157:	    numTests = numTests + 1;
+        -:  158:	  }
+        -:  159:
+        -:  160:	  //------------- Check kingdom and victory card ------------------
+     4973:  161:	  printf("\nTesting Kingdom Card and Victory Card states...\n\n");
+call    0 returned 100%
+        -:  162:
+    54703:  163:	  for(int j = 0; j < 10; j++)
+branch  0 taken 91%
+branch  1 taken 9% (fallthrough)
+        -:  164:	  {
+    49730:  165:	    printf("kingdom card k[%d] supply count = %d, expected = %d : ", j, testG.supplyCount[k[j]], randG->supplyCount[k[j]]);
+call    0 returned 100%
+    49730:  166:	    myAssert(testG.supplyCount[k[j]], randG->supplyCount[k[j]], &passCount);
+call    0 returned 100%
+        -:  167:
+    49730:  168:	    numTests = numTests + 1;
+        -:  169:	  }
+        -:  170:
+     4973:  171:	  printf("\n");
+call    0 returned 100%
+        -:  172:
+     4973:  173:	  printf("victory card [estate] supply count = %d, expected = %d : ", testG.supplyCount[estate], randG->supplyCount[estate]);
+call    0 returned 100%
+     4973:  174:	  myAssert(testG.supplyCount[estate], randG->supplyCount[estate], &passCount);
+call    0 returned 100%
+        -:  175:
+     4973:  176:	  numTests = numTests + 1;
+        -:  177:
+     4973:  178:	  printf("victory card [duchy] supply count = %d, expected = %d : ", testG.supplyCount[duchy], randG->supplyCount[duchy]);
+call    0 returned 100%
+     4973:  179:	  myAssert(testG.supplyCount[duchy], randG->supplyCount[duchy], &passCount);
+call    0 returned 100%
+        -:  180:
+     4973:  181:	  numTests = numTests + 1;
+        -:  182:
+     4973:  183:	  printf("victory card [province] supply count = %d, expected = %d : ", testG.supplyCount[province], randG->supplyCount[province]);
+call    0 returned 100%
+     4973:  184:	  myAssert(testG.supplyCount[province], randG->supplyCount[province], &passCount);
+call    0 returned 100%
+        -:  185:
+     4973:  186:	  numTests = numTests + 1;
+        -:  187:
+     4973:  188:	  printf("---------------------------------------------------\n");
+call    0 returned 100%
+        -:  189:
+        -:  190:	  //----------------------- print results -------------------------------
+     4973:  191:	  printf("\n >>>>> SUCCESS: Test # %d for card [%s] complete.\nPassed [%d of %d] tests <<<<<\n\n", x+1, TESTCARD, passCount, numTests);
+call    0 returned 100%
+        -:  192:
+     4973:  193:	  numPass = numPass + passCount;		//record number of tests passed for this game
+     4973:  194:	  numFail = numFail + (numTests - passCount);	//record number of tests failed for this game
+     4973:  195:	  totTests = totTests + numTests;		//record number of tests run
+        -:  196:	
+     4973:  197:	  passCount = 0;				//reset passCount
+     4973:  198:	  numTests = 4;					//reset numTests
+        -:  199:
+     4973:  200:	  free(randG);					//free dynamically allocated memory
+     4973:  201:	  memset(&testG, 0, sizeof(struct gameState));	//clear testG struct
+        -:  202:
+        -:  203:  }//end outer for loop
+        -:  204:
+        -:  205:
+        1:  206:  printf("\n---------------------------------------------\n");
+call    0 returned 100%
+        1:  207:  printf("Final results of random testing:\n");
+call    0 returned 100%
+        1:  208:  printf("--------------------------------\n");
+call    0 returned 100%
+        1:  209:  printf("Total # of games run: %d\nTotal # of tests run: %d\nTotal # of tests passed: %d\nTotal # of tests failed: %d\n", NUM_TESTS,totTests, numPass, numFail);
+call    0 returned 100%
+        1:  210:  return 0;
+        -:  211:}
+        -:  212:
+        -:  213:/*************************************************************************************/
+        -:  214:/*************************************************************************************/
+        -:  215:
+        -:  216:
+        -:  217:/**********************************
+        -:  218:* Function: myAssert()
+        -:  219:* Input: int left, int right
+        -:  220:* Output: none
+        -:  221:* Description: compares left value
+        -:  222:*   to right and displays a message
+        -:  223:**********************************/
+function myAssert called 92086 returned 100% blocks executed 100%
+    92086:  224:void myAssert(int left, int right, int* count)
+        -:  225:{
+    92086:  226:  if(left == right)
+branch  0 taken 99% (fallthrough)
+branch  1 taken 1%
+        -:  227:  {
+    92084:  228:    printf("test passed!\n");
+call    0 returned 100%
+    92084:  229:    *count+=1;
+        -:  230:  }
+        -:  231:  else
+        -:  232:  {
+        2:  233:    printf("test failed!\n");
+call    0 returned 100%
+        -:  234:  }
+    92086:  235:}
+        -:  236:
+        -:  237:/**********************************
+        -:  238:* Function: myAssertLessThan()
+        -:  239:* Input: int left, int right
+        -:  240:* Output: none
+        -:  241:* Description: compares left value
+        -:  242:*   to right and displays a message
+        -:  243:**********************************/
+function myAssertLessThan called 12464 returned 100% blocks executed 100%
+    12464:  244:void myAssertLessThan(int left, int right, int* count)
+        -:  245:{
+    12464:  246:  if(left <= right)
+branch  0 taken 99% (fallthrough)
+branch  1 taken 1%
+        -:  247:  {
+    12404:  248:    printf("test passed!\n");
+call    0 returned 100%
+    12404:  249:    *count+=1;
+        -:  250:  }
+        -:  251:  else
+        -:  252:  {
+       60:  253:    printf("test failed!\n");
+call    0 returned 100%
+        -:  254:  }
+    12464:  255:}
