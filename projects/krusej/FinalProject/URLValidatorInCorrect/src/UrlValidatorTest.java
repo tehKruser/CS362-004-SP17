@@ -40,10 +40,35 @@ public class UrlValidatorTest extends TestCase {
    
    public void testManualTest()
    {
+	   int failCount = 0;
+	   int passCount = 0;
 	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
-	   System.out.println(urlVal.isValid("http://www.amazon.com"));
+	  
+	   System.out.println("-------Testing Valid URLs-------");
+	   System.out.println("The following urls should all result in 'true'");
+	   for(int i = 0; i < goodUrls.length; i++){
+		   if(urlVal.isValid(goodUrls[i])){
+			   passCount += 1;
+		   } else {
+			   failCount += 1;
+		   }
+		   System.out.println(i + ". " + goodUrls[i] + ": " + String.valueOf(urlVal.isValid(goodUrls[i])));
+	   }
+	   
+	   System.out.println("\n-------Testing Invalid URLs-------");
+	   System.out.println("The following urls should all result in 'false'");
+	   for(int i = 0; i < badUrls.length; i++){
+		   if(urlVal.isValid(badUrls[i])){
+			   failCount += 1;
+		   } else {
+			   passCount += 1;
+		   }
+		   System.out.println(i + ". " + badUrls[i] + ": " + String.valueOf(urlVal.isValid(badUrls[i])));
+	   }
 	   
 	   
+	   System.out.println("\nTests Passed: " + passCount);
+	   System.out.println("Tests Failed: " + failCount);
    }
    
    
@@ -76,5 +101,27 @@ public class UrlValidatorTest extends TestCase {
     * @param testObjects Used to create a url.
     */
    
-
+   //----- URLs for manual testing
+   // URLs that are valid
+   String good1 = new String("http://www.google.com");
+   String good2 = new String("http://www.google.com/");
+   String good3 = new String("http://www.google.com:0");
+   String good4 = new String("http://www.google.com:80");
+   String good5 = new String("http://www.google.com:65535");
+   String good6 = new String("http://www.google.com/test1");
+   String good7 = new String("http://www.google.com?action=view");
+   String good8 = new String("http://www.google.com/test1?action=view");
+   String good9 = new String("http://www.google.com/test1/file");
+   
+   //URLs that are invalid
+   String bad1 = new String("http://www.google.com:-1");
+   String bad2 = new String("http:/www.google.com");
+   String bad3 = new String("http:www.google.com");
+   String bad4 = new String("http://www.google.com:3a");
+   String bad5 = new String("http://www.google.com/#");
+   String bad6 = new String("http://www.google.com/#/file");
+   
+   String[] goodUrls= { good1, good2, good3, good4, good5, good6, good7, good8, good9};
+   String[] badUrls= { bad1, bad2, bad3, bad4, bad5, bad6};
+   
 }
