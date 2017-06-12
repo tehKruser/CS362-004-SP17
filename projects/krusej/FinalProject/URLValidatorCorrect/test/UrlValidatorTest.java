@@ -84,6 +84,9 @@ public class UrlValidatorTest extends TestCase {
     */
    public void testIsValid(Object[] testObjects, long options) {
       UrlValidator urlVal = new UrlValidator(null, null, options);
+      
+      System.out.println("http://256.256.256.256" + ": " + String.valueOf(urlVal.isValid("http://256.256.256.256")));
+      
       assertTrue(urlVal.isValid("http://www.google.com"));
       assertTrue(urlVal.isValid("http://www.google.com/"));
       int statusPerLine = 60;
